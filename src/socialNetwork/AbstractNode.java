@@ -9,6 +9,7 @@ public abstract class AbstractNode implements Serializable{
 	private int outDegree=0;
 	
 	
+	
 	public AbstractNode(String idendt) {
 		id=idendt;
 	}
