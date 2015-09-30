@@ -12,11 +12,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.RandomAccessFile;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.StringTokenizer;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentHashMap.KeySetView;
 import java.util.stream.Stream;
 
@@ -25,51 +23,23 @@ import javax.swing.JFileChooser;
 import socialNetwork.AbstractNode;
 import socialNetwork.DirectionalLink;
 import socialNetwork.Graph;
-import socialNetwork.Node;
-import concurrenceClasses.StringFileWriter;
-import concurrenceClasses.ThreadHomophiliaCalculatorOnMemory;
-import concurrenceClasses.OrderedThreadPool;
-import dataAnalysis.User;
-import dataAnalysis.UserMap;
+import socialNetwork.GraphParser;
 
 
 public class GraphFileSplitter {
 	
-private static final int SPLIT_NUMBER = 3;
-private static final long USER_NUMBER = 1632803;
-private static long[] idThreshold ;
-private static final int WAIT_TIME = 50;
-private static final int NUMBER_OF_THREAD = 8;
 private static final int DISTANCE_TARGET = 2;
-private static int topUserCurrentWriter=1;
 private static File networkFile;
-private static File profileInfoFile;
-private static UserMap profiles;
-private static User userCaller;
-private static User userTarget;
-private static double percentualePrecedente=-1;
-private static StringBuilder buffer=new StringBuilder();
-private static OrderedThreadPool<ThreadHomophiliaCalculatorOnMemory> pool;
-private static long ThreadNodeIDString=-1;
-private static Collection<Long> threadNodeTargetList;
-private static BufferedWriter[] writers;
-private static long lineNumber;
-private static int currentLineNumber;
-private static int partialLineNumber;
-private static long averageLineNumber;
-private static long maxID;
 private static Graph graph;
-private static AbstractNode caller;
 private static File directorySplit;
-private static int numberOfZero= (int) Math.log10(SPLIT_NUMBER);
+//private static int numberOfZero= (int) Math.log10(SPLIT_NUMBER);
 private static int numberOfFileCreated=0;
 
 public static void main(String[] args) {
 	networkFile = null;
 	try {
 		networkFile = getFile(args);
-		profileInfoFile = getFile(args);
-		graphCreation();
+		graph=graphCreation();
 		System.out.println("Splitting");
 		splitGraph();
 		System.out.println("Fine");
@@ -80,74 +50,54 @@ public static void main(String[] args) {
 	}
 }
 
-private static void graphCreation() throws IOException {
-	/*File fileCache = new File("GraphOf"+networkFile.getName());
+private static Graph graphCreation() throws IOException {
+	Graph graph = null;
+	File fileCache = new File("GraphOf"+networkFile.getName());
 	if (fileCache.exists()) {
 		try {
 			System.out.println("trovatoFileDiCahce");
 			System.out.println("Loading:");
 			System.out.println("0%");
-			loadCache(fileCache);
+			graph=(Graph) loadCache(fileCache);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-	}else{*/
+	}else{
 		BufferedReader reader=new BufferedReader(new FileReader(networkFile));
 		Stream<String> lines = reader.lines();
-		long count=30622564;
-		String link;
-		StringTokenizer nodeToken;
-		graph=new Graph();
+		long count=lines.count();
 		long line = 0;
 		int percent=0;
-		long p;
-		double weight;
-		for (Iterator<String> iterator = lines.iterator(); iterator.hasNext();) {
-			link = (String) iterator.next();
-			if (link==null) {
-				break;
-			}
-			nodeToken=new StringTokenizer(link,"\t");
-			String nodeOne = nodeToken.nextToken();
-			String nodeTWO = nodeToken.nextToken();
-			weight=0;
-			if (nodeToken.hasMoreTokens()) {
-				weight = Double.parseDouble( nodeToken.nextToken());
-			}
-			createGraphComponent(nodeOne, nodeTWO,weight);
-			line+=100;
-			p = (line)/count;
-			if (p!=percent) {
-				percent=(int)p;
-				System.out.println(percent+"%");
-				}
-			}
+		long percentTmp;
+		
+		reader=new BufferedReader(new FileReader(networkFile));
+		lines = reader.lines();
+		
+		graph = GraphParser.parse(lines, "\t");
+		
 		reader.close();
-	//}
+		writeCache(fileCache);
+		line+=100;
+		percentTmp = (line)/count;
+		if (percentTmp!=percent) {
+			percent=(int)percentTmp;
+			System.out.println(percent+"%");
+		}
+	}
+	return graph;
 }
 
-private static void writeCache(File input) throws IOException {
-	FileOutputStream fos = new FileOutputStream("GraphOf"+input.getName());
-	ObjectOutputStream oos = new ObjectOutputStream(fos);
-	oos.writeObject(graph);
-	oos.close();
-}
 
-private static void loadCache(File fileCache) throws IOException, ClassNotFoundException {
-	FileInputStream fis = new FileInputStream(fileCache);
-	ObjectInputStream ois = new ObjectInputStream(fis);
-	graph = (Graph)  ois.readObject();
-	ois.close();
-}
+
 
 private static void splitGraph() throws IOException {
 	AbstractNode firstNode;
 	LinkedList<AbstractNode> toVisit;
 	KeySetView<String,AbstractNode> allNodes = graph.getNodes().keySet();
-	LinkedList<AbstractNode> borderNode=new LinkedList<AbstractNode>();
 	Collection<DirectionalLink> adiacency;
 	AbstractNode currentNode;
 	AbstractNode target;
+	
 	
 	int size = allNodes.size();
 	int percent=-1;
@@ -155,37 +105,60 @@ private static void splitGraph() throws IOException {
 	int nodeWrited = 0;
 	int distance;
 	int nodeCurrentDistance;
+	ConcurrentHashMap<String, BufferedWriter> fileHash=new ConcurrentHashMap<String, BufferedWriter>();
 	String targetID;
 	toVisit = new LinkedList<AbstractNode>();
-	StringBuilder stringBuilder=null;
+	BufferedWriter fileToWrite = null;
+
+	//StringBuilder stringBuilder=null;
 
 	for (String id : allNodes) {
 		System.out.println(id);
 		firstNode = graph.getNode(id);
 		if (allNodes.remove(id)) {
 			distance = 0;
-			stringBuilder=getBuilder(stringBuilder);
+			fileToWrite=flush(fileToWrite);
+			//stringBuilder=getBuilder(stringBuilder);
 			toVisit.add(firstNode);
 			nodeCurrentDistance = 1;
 			while (!toVisit.isEmpty()) {
 				currentNode = toVisit.pop();
 				adiacency=currentNode.getAdiacencyList();
+				fileHash.put(currentNode.getId(), fileToWrite);
+
+				//add this node to filehash
 				
 				nodeCurrentDistance--;
 				nodeWrited+=100;
 				status = nodeWrited/size;
 				
+				
 				for (DirectionalLink link : adiacency) {
 					target = link.getTarget();
 					targetID = target.getId();
 					if (allNodes.remove(targetID)) {
+						if (fileHash.get(targetID)==null) {
+							fileHash.put(targetID, fileToWrite);
+						}
 						
 						toVisit.add(target);
+						
+						appendLink(currentNode, targetID, fileToWrite);
+
+					}else {
+						BufferedWriter oldFile = fileHash.get(targetID);
+						if (fileToWrite.equals(oldFile)) {
+							appendLink(currentNode, targetID, oldFile);
+							fileHash.put(targetID, oldFile);
+						}else {
+							appendLink(currentNode, targetID, fileToWrite);
+							fileHash.put(targetID, fileToWrite);
+						}
 					}
-					stringBuilder.append(currentNode.getId());
-					stringBuilder.append("\t");
-					stringBuilder.append(targetID);
-					stringBuilder.append("\n");
+//					stringBuilder.append(currentNode.getId());
+//					stringBuilder.append("\t");
+//					stringBuilder.append(targetID);
+//					stringBuilder.append("\n");
 					
 				}
 				if (status!=percent) {
@@ -197,7 +170,8 @@ private static void splitGraph() throws IOException {
 					System.out.println("dis: "+distance);
 					nodeCurrentDistance=toVisit.size();
 					if (distance==DISTANCE_TARGET) {
-						stringBuilder=getBuilder(stringBuilder);
+						fileToWrite=flush(fileToWrite);
+						//stringBuilder=getBuilder(stringBuilder);
 						distance = 0;
 						nodeCurrentDistance=1;
 					}
@@ -206,10 +180,33 @@ private static void splitGraph() throws IOException {
 			}
 		}
 	}
+	flushAllAndClose(fileHash.values());
 	
 }
 
+private static void flushAllAndClose(Collection<BufferedWriter> values) throws IOException {
+	for (BufferedWriter bufferedWriter : values) {
+		bufferedWriter.flush();
+		bufferedWriter.close();
+	}
+}
 
+private static void appendLink(AbstractNode currentNode, String targetID,
+		BufferedWriter oldFile) throws IOException {
+	oldFile.append(currentNode.getId());
+	oldFile.append("\t");
+	oldFile.append(targetID);
+	oldFile.append("\n");
+}
+
+
+
+private static BufferedWriter flush(BufferedWriter fileToWrite) throws IOException {
+	if (fileToWrite!=null) {
+		fileToWrite.flush();
+	}
+	return getNewFile();
+}
 
 private static StringBuilder getBuilder(StringBuilder stringBuilder) throws IOException {
 	if (stringBuilder!=null) {
@@ -250,96 +247,22 @@ private static BufferedWriter getNewFile() throws IOException {
 	
 }
 
-private static void createGraphComponent(String nodeID, String nodeTarget, double weight) {
-	if (!nodeID.equals(caller)) {
-		caller = graph.getNode(nodeID);
-	}
-	AbstractNode target=graph.getNode(nodeTarget);
-	caller.directionalLink(target,weight);
-
+private static void writeCache(File input) throws IOException {
+	FileOutputStream fos = new FileOutputStream("GraphOf"+input.getName());
+	ObjectOutputStream oos = new ObjectOutputStream(fos);
+	oos.writeObject(graph);
+	oos.close();
 }
 
-private static void spltFile() throws IOException {
-	BufferedReader reader=new BufferedReader(new FileReader(networkFile));
-	Stream<String> lines = reader.lines();
-	writers = inizializeWriterArray();
-	//lineNumber = lines.count();
-	averageLineNumber = lineNumber/SPLIT_NUMBER+1;
-	partialLineNumber=0;
-	String link;
-	StringTokenizer nodeToken;
-	long nodeID;
-	long nodeTarget;
-//	for (Iterator<String> iterator = lines.iterator(); iterator.hasNext();) {
-//		link = (String) iterator.next();
-//		if (link==null) {
-//			break;
-//		}
-//		nodeToken=new StringTokenizer(link,"\t");
-//		nodeID = Long.parseLong(nodeToken.nextToken());
-//		nodeTarget = Long.parseLong(nodeToken.nextToken());
-//		evaluateThreshold(nodeID, nodeTarget);
-//	}
-//	reader=new BufferedReader(new FileReader(networkFile));
-//	lines = reader.lines();
-	for (Iterator<String> iterator2 = lines.iterator(); iterator2.hasNext();) {
-		link = (String) iterator2.next();
-		if (link==null) {
-			break;
-		}
-		nodeToken=new StringTokenizer(link,"\t");
-		nodeID = Long.parseLong(nodeToken.nextToken());
-		nodeTarget = Long.parseLong(nodeToken.nextToken());
-		//writeSplit(nodeID, nodeTarget);
-	}
-	completeWrite();
-	System.out.println("SplitComplete");
+private static Object loadCache(File fileCache) throws IOException, ClassNotFoundException {
+	FileInputStream fis = new FileInputStream(fileCache);
+	ObjectInputStream ois = new ObjectInputStream(fis);
+	Object obj =  ois.readObject();
+	ois.close();
+	return obj;
 }
 
 
-
-private static void completeWrite() throws IOException {
-	for (BufferedWriter bufferedWriter : writers) {
-		bufferedWriter.flush();
-	}
-}
-
-
-
-private static BufferedWriter[] inizializeWriterArray() throws IOException {
-	BufferedWriter[] result = new BufferedWriter[SPLIT_NUMBER+1];
-	String nameNetworkFile = networkFile.getName();
-	String path = networkFile.getParent();
-	StringBuilder stringBuilder= new StringBuilder();
-	stringBuilder.append(path);
-	stringBuilder.append("\\SplitOf");
-	stringBuilder.append(nameNetworkFile);
-	File dir = new File(stringBuilder.toString());
-	dir.mkdir();
-	
-	for (int i = 1; i <=result.length; i++) {
-		stringBuilder = new StringBuilder();
-		stringBuilder.append(dir.getAbsolutePath());
-		stringBuilder.append("\\");
-		for (int j = numberOfZero-(int) Math.log10(i); j > 0; j--) {
-			stringBuilder.append("0");
-		}
-		stringBuilder.append(i);
-		stringBuilder.append("PartOf");
-		stringBuilder.append(nameNetworkFile);
-		result[i-1]=new BufferedWriter(new FileWriter(new File(stringBuilder.toString())));
-	}
-	return result;
-}
-
-
-private static void printPercentualeRandomAccessFile(RandomAccessFile reader) throws IOException {
-	int percentuale = (int) (((double)(reader.getFilePointer()))/(reader.length()/100.0));
-	if (percentuale!=percentualePrecedente) {
-		percentualePrecedente=percentuale;
-		System.out.println(percentuale+"%");
-	}
-}
 
 
 
