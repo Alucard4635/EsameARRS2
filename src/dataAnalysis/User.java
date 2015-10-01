@@ -137,14 +137,14 @@ public class User implements Serializable {
 		user_id=Long.parseLong(field.nextToken());
 		isPublicStatus.setData(new Boolean( field.nextToken().equals("1")));
 		
-		isPublicStatus.setAnalyzer(getBooleanStrategy());
+		//isPublicStatus.setAnalyzer(getBooleanStrategy());
 		completion_percentage=Integer.parseInt(field.nextToken())/100.0;
 		isMale.setData(new Boolean( field.nextToken().equals("1")));
 		
-		isMale.setAnalyzer(getBooleanStrategy());
+		//isMale.setAnalyzer(getBooleanStrategy());
 		region.setData(field.nextToken());
 		
-		region.setAnalyzer( getAttributeStrategy());
+		//region.setAnalyzer( getAttributeStrategy());
 		
 		last_login=field.nextToken();
 		registration=field.nextToken();
@@ -155,7 +155,7 @@ public class User implements Serializable {
 			parseInt=0;
 		}
 		age.setData(parseInt);
-		age.setAnalyzer(getIntegerStrategy());
+		//age.setAnalyzer(getIntegerStrategy());
 		nextToken = field.nextToken();
 		minorField=new StringTokenizer(nextToken, ",");
 		
@@ -166,13 +166,13 @@ public class User implements Serializable {
 			parseHeight = parseHeight(height);
 		}
 		heightInCm.setData(parseHeight);
-		heightInCm.setAnalyzer(getIntegerStrategy());
+		//heightInCm.setAnalyzer(getIntegerStrategy());
 		Integer parseWeight = null;
 		if (minorField.hasMoreTokens()) {
 			parseWeight = parseWeight(minorField.nextToken());
 		}
 		weightInKg.setData(parseWeight);
-		weightInKg.setAnalyzer(getIntegerStrategy()) ;
+		//weightInKg.setAnalyzer(getIntegerStrategy()) ;
 
 		
 		int attributeIndex = 0;

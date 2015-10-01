@@ -29,11 +29,12 @@ public abstract class AbstractNode implements Serializable{
 			addDirectionalLink(link);
 		}
 	}
+	
 	public void directionalLink(AbstractNode target,double weight){
 		directionalLink(new DirectionalLink(target,weight));
 	}
+	
 	protected abstract void addDirectionalLink(DirectionalLink link); 
-
 	
 	private void updateDegree(AbstractNode target) {
 		target.inDegree++;
@@ -44,7 +45,6 @@ public abstract class AbstractNode implements Serializable{
 		directionalLink(n,weight);
 		n.directionalLink(this,weight);
 	}
-	
 	
 	public abstract Collection<DirectionalLink> getAdiacencyList();
 
@@ -87,9 +87,26 @@ public abstract class AbstractNode implements Serializable{
 		return outDegree;
 	}
 	
-	/*public boolean triadricClosure(){
-		
-	}*/
-
-
+	public long triadricClosure(){
+		Collection<DirectionalLink> list = getAdiacencyList();
+		Collection<DirectionalLink> listOfMyTarget;
+		long hit=0;
+		boolean gotHit;
+		long numberOfFriendWithATriangle=0;//TODO
+		for (DirectionalLink directionalLink : list) {
+			AbstractNode target = directionalLink.getTarget();
+			listOfMyTarget = target.getAdiacencyList();
+			gotHit=false;
+			for (DirectionalLink targetOfMyTarget : listOfMyTarget) {
+				if (isAdiacentNode(targetOfMyTarget.getTarget())) {
+					hit++;
+					gotHit = true;
+				}
+			}
+			if (gotHit) {
+				numberOfFriendWithATriangle++;
+			}
+		}
+		return hit;
+	}
 }

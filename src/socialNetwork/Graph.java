@@ -72,6 +72,8 @@ public class Graph implements Serializable{
 		}
 		return -1 ;
 	}
+	
+	
 //	public static Collection<DirectionalLink> predictDirectionalLink(AbstractNode root){
 //		LinkedList<AbstractNode> visited=new LinkedList<AbstractNode>();
 //		LinkedList<AbstractNode> toVisit=new LinkedList<AbstractNode>();
