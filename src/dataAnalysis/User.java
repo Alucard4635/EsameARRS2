@@ -70,12 +70,12 @@ public class User implements Serializable {
 	};
 
 	public User() {
-		isPublicStatus=new AnalyzableData<Boolean>(null, booleanStrategy);
-		isMale=new AnalyzableData<Boolean>(null, booleanStrategy);
-		region=new AnalyzableData<CharSequence>(null, attributeStrategy);
-		age=new AnalyzableData<Integer>(null, integerStrategy);
-		heightInCm=new AnalyzableData<Integer>(null, integerStrategy);
-		weightInKg=new AnalyzableData<Integer>(null, integerStrategy);
+		isPublicStatus=new AnalyzableData<Boolean>(null, getBooleanStrategy());
+		isMale=new AnalyzableData<Boolean>(null, getBooleanStrategy());
+		region=new AnalyzableData<CharSequence>(null, getAttributeStrategy());
+		age=new AnalyzableData<Integer>(null, getIntegerStrategy());
+		heightInCm=new AnalyzableData<Integer>(null, getIntegerStrategy());
+		weightInKg=new AnalyzableData<Integer>(null, getIntegerStrategy());
 	}
 	public double calculateHomophiliaMacth(User u) {
 		double score=0;
@@ -135,11 +135,17 @@ public class User implements Serializable {
 		StringTokenizer minorField;
 		String nextToken;
 		user_id=Long.parseLong(field.nextToken());
-		isPublicStatus.setData(new Boolean( field.nextToken().equals("1")));isPublicStatus.setAnalyzer(booleanStrategy);
+		isPublicStatus.setData(new Boolean( field.nextToken().equals("1")));
+		
+		isPublicStatus.setAnalyzer(getBooleanStrategy());
 		completion_percentage=Integer.parseInt(field.nextToken())/100.0;
-		isMale.setData(new Boolean( field.nextToken().equals("1")));isMale.setAnalyzer(booleanStrategy);
+		isMale.setData(new Boolean( field.nextToken().equals("1")));
+		
+		isMale.setAnalyzer(getBooleanStrategy());
 		region.setData(field.nextToken());
-		region.setAnalyzer( attributeStrategy);
+		
+		region.setAnalyzer( getAttributeStrategy());
+		
 		last_login=field.nextToken();
 		registration=field.nextToken();
 		int parseInt;
@@ -149,7 +155,7 @@ public class User implements Serializable {
 			parseInt=0;
 		}
 		age.setData(parseInt);
-		age.setAnalyzer(integerStrategy);
+		age.setAnalyzer(getIntegerStrategy());
 		nextToken = field.nextToken();
 		minorField=new StringTokenizer(nextToken, ",");
 		
@@ -160,13 +166,13 @@ public class User implements Serializable {
 			parseHeight = parseHeight(height);
 		}
 		heightInCm.setData(parseHeight);
-		heightInCm.setAnalyzer(integerStrategy);
+		heightInCm.setAnalyzer(getIntegerStrategy());
 		Integer parseWeight = null;
 		if (minorField.hasMoreTokens()) {
 			parseWeight = parseWeight(minorField.nextToken());
 		}
 		weightInKg.setData(parseWeight);
-		weightInKg.setAnalyzer(integerStrategy) ;
+		weightInKg.setAnalyzer(getIntegerStrategy()) ;
 
 		
 		int attributeIndex = 0;
@@ -180,7 +186,7 @@ public class User implements Serializable {
 					while (minor.startsWith(" ")&&minor.length()>1) {
 						minor=minor.substring(1);
 					}
-					attributes[attributeIndex].add(new AnalyzableData<CharSequence>(minor, attributeStrategy));
+					attributes[attributeIndex].add(new AnalyzableData<CharSequence>(minor, getAttributeStrategy()));
 				}
 			}
 			attributeIndex++;
@@ -253,6 +259,24 @@ public long getUser_id() {
 
 public void setUser_id(long user_id) {
 	this.user_id = user_id;
+}
+public HomophiliaAnalysisStrategy<CharSequence> getAttributeStrategy() {
+	return attributeStrategy;
+}
+public void setAttributeStrategy(HomophiliaAnalysisStrategy<CharSequence> attributeStrategy) {
+	this.attributeStrategy = attributeStrategy;
+}
+public HomophiliaAnalysisStrategy<Boolean> getBooleanStrategy() {
+	return booleanStrategy;
+}
+public void setBooleanStrategy(HomophiliaAnalysisStrategy<Boolean> booleanStrategy) {
+	this.booleanStrategy = booleanStrategy;
+}
+public HomophiliaAnalysisStrategy<Integer> getIntegerStrategy() {
+	return integerStrategy;
+}
+public void setIntegerStrategy(HomophiliaAnalysisStrategy<Integer> integerStrategy) {
+	this.integerStrategy = integerStrategy;
 }
 
 }
