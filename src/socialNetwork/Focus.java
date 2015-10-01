@@ -5,6 +5,14 @@ import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Focus implements Serializable {
+	private String focusId;
+	
+	public Focus(String id) {
+		focusId = id;
+	}
+	
+	public Focus() {
+	}
 	
 	private ConcurrentHashMap<String, AbstractNode> nodes=new ConcurrentHashMap<String, AbstractNode>();
 

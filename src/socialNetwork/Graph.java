@@ -11,11 +11,15 @@ public class Graph implements Serializable{
 	 */
 	private static final long serialVersionUID = -6152011564808931861L;
 	private ConcurrentHashMap<String, AbstractNode>nodes;
+	private ConcurrentHashMap<String, Focus>focus;
 	public Graph() {
 		nodes=new ConcurrentHashMap<String, AbstractNode>();
+		focus=new ConcurrentHashMap<String, Focus>();
+
 	}
-	public Graph(int capacity) {
-		nodes=new ConcurrentHashMap<String, AbstractNode>(capacity);
+	public Graph(int nodeCapacity,int focusCapacity) {
+		nodes=new ConcurrentHashMap<String, AbstractNode>(nodeCapacity);
+		focus=new ConcurrentHashMap<String, Focus>(focusCapacity);
 	}
 	
 	public AbstractNode getNode(String id){
@@ -26,14 +30,30 @@ public class Graph implements Serializable{
 		}
 		return requiredNode;
 	}
+	public Focus getFocus(String id){
+		Focus requiredFocus=takeFocus(id);
+		if( requiredFocus==null){
+			requiredFocus=new Focus(id);
+			focus.put(id, requiredFocus);
+		}
+		return requiredFocus;
+	}
+	
+	private Focus takeFocus(String id) {
+		return focus.get(id);
+	}
+	
+	public Focus removeFocus(String id) {
+		return focus.remove(id);
+	}
 	
 	public AbstractNode removeNode(String id){
 		return nodes.remove(id);
 	}
 	
 	
-	private AbstractNode takeNode(String id2) {
-		return nodes.get(id2);
+	private AbstractNode takeNode(String id) {
+		return nodes.get(id);
 	}
 	public ConcurrentHashMap<String,AbstractNode> getNodes() {
 		return nodes;

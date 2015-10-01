@@ -93,18 +93,24 @@ public abstract class AbstractNode implements Serializable{
 		long hit=0;
 		boolean gotHit;
 		long numberOfFriendWithATriangle=0;//TODO
+		long closedTriangles;
 		for (DirectionalLink directionalLink : list) {
 			AbstractNode target = directionalLink.getTarget();
-			listOfMyTarget = target.getAdiacencyList();
-			gotHit=false;
-			for (DirectionalLink targetOfMyTarget : listOfMyTarget) {
-				if (isAdiacentNode(targetOfMyTarget.getTarget())) {
-					hit++;
-					gotHit = true;
-				}
-			}
-			if (gotHit) {
+			closedTriangles = getTrianglesClosed(hit, target);
+			if (closedTriangles>0) {
+				hit += closedTriangles;
 				numberOfFriendWithATriangle++;
+			}
+		}
+		return hit;
+	}
+
+	private long getTrianglesClosed(long hit, AbstractNode target) {
+		Collection<DirectionalLink> listOfMyTarget;
+		listOfMyTarget = target.getAdiacencyList();
+		for (DirectionalLink targetOfMyTarget : listOfMyTarget) {
+			if (isAdiacentNode(targetOfMyTarget.getTarget())) {
+				hit++;
 			}
 		}
 		return hit;
