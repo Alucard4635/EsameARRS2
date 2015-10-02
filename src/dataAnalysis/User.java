@@ -2,7 +2,12 @@ package dataAnalysis;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.StringTokenizer;
+
+import socialNetwork.Focus;
+import socialNetwork.Graph;
 
 // String string = "January 2, 2010";
 // DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy",
@@ -17,9 +22,9 @@ import java.util.StringTokenizer;
 // mydate.setTime(thedate);
 
 public class User implements Serializable {
-	private static final int NUMBERO_OF_NON_FILLABLE_FIELD = 6;
-	private double[] homophiliaWeightValues = inizializeHomophiliaWeightValues();
-	private double[] inizializeHomophiliaWeightValues() {
+	public static final int NUMBERO_OF_NON_FILLABLE_FIELD = 6;
+	private static double[] homophiliaWeightValues = inizializeHomophiliaWeightValues();
+	private static double[] inizializeHomophiliaWeightValues() {
 		double[] weights = new double[NUMBERO_OF_NON_FILLABLE_FIELD + ProfileAttributesField
 				.values().length];
 		for (int i = 0; i < weights.length; i++) {
@@ -130,8 +135,8 @@ public class User implements Serializable {
 	
 
 
-	public void parseUser(String profileTarget) {
-		StringTokenizer field=new StringTokenizer(profileTarget, "	");
+	public void parseUser(String profileDescription) {
+		StringTokenizer field=new StringTokenizer(profileDescription, "	");
 		StringTokenizer minorField;
 		String nextToken;
 		user_id=Long.parseLong(field.nextToken());
@@ -192,6 +197,7 @@ public class User implements Serializable {
 			attributeIndex++;
 		}
 	}
+	
 
 	private Integer parseWeight(String nextToken) {
 		return removeUnit(nextToken);
