@@ -87,8 +87,6 @@ public class DataArray {
 				filePointer = reader.getFilePointer();
 			}else {
 				throw new DataArrayException(DataExceptionType.INCORRECT_FORMAT);
-				
-				
 			}
 		}
 		

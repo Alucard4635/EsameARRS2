@@ -3,45 +3,30 @@ package mainPackage;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Stream;
-
 import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
-
-import socialNetwork.Focus;
-import concurrenceClasses.OrderedThreadPool;
-import concurrenceClasses.ThreadHomophiliaCalculator;
-import dataAnalysis.AnalyzableData;
-import dataAnalysis.DataArray;
-import dataAnalysis.DataArrayException;
 import dataAnalysis.User;
-import dataAnalysis.DataArray.OrderType;
-import dataAnalysis.DataArrayException.DataExceptionType;
 import dataAnalysis.User.ProfileAttributesField;
 
 
 public class FocusExtractor {
 	
+private static final int NUMBER_OF_NUMBER_CATEGORY = 10;
+
+
+
+
 public static void main(String[] args) {
-	File networkFile = null;
 	File profileInfoFile=null;
 	try {
-		networkFile = getFile(args);
 		profileInfoFile = getFile(args);
-		//getFocus(profileInfoFile);
+		writeFocus(profileInfoFile);
 	} catch (FileNotFoundException e) {
 		e.printStackTrace();
 	} catch (IOException e) {
@@ -53,110 +38,161 @@ public static void main(String[] args) {
 
 
 
-//private static ConcurrentHashMap<String, Focus> getFocus(File profileInfoFile) throws IOException, DataArrayException {
-////	BufferedReader reader=new BufferedReader(new FileReader(networkFile));
-//	RandomAccessFile reader=new RandomAccessFile(profileInfoFile,"r");
-//	System.out.println("Inizio Analisi");
-//	
-//	byte[] b = new byte[(int) reader.length()];
-//	reader.readFully(b);
-//	String all =new String(b);
-//	b=null;
-//	StringTokenizer rows = new StringTokenizer(all,"\n");
-//	all=null;
-//	long percent=-1;
-//	int line = 0;
-//	int count = rows.countTokens();
-//	long percentTmp;
-//	ConcurrentHashMap<String, String> profiles=new ConcurrentHashMap<String, String>();
-//	String focusName;
-//	String content;
-//	int regionCounter=0;
-//	while (rows.hasMoreTokens()) {
-//		StringTokenizer field=new StringTokenizer(rows.nextToken(), "\t");
-//		StringTokenizer minorField;
-//		field.nextToken();//skip ID
-//		content="PUBLIC"+field.nextToken();
-//		focusName = profiles.get(content);//PUBLIC
-//		addToHash(profiles, focusName, content);
-//		
-//		field.nextToken();//skip percentual
-//		
-//		content="isMALE"+field.nextToken();
-//		focusName = profiles.get(content);//ISMALE
-//		addToHash(profiles, focusName, content);
-//		
-//		content=field.nextToken();
-//		focusName = profiles.get(content);//REGION
-//		if (focusName==null) {
-//			profiles.put(content, "REGION"+regionCounter++);
-//		}
-//
-//		field.nextToken();//skip last_login=
-//		field.nextToken();//skip registration
-//		
-//		content="AGE"+field.nextToken();
-//		focusName = profiles.get(content);//AGE
-//		addToHash(profiles, focusName, content);
-//
-//		content = field.nextToken();
-//		minorField=new StringTokenizer(content, ",");
-//		if (minorField.hasMoreTokens()) {
-//			content = "HEIGHT"+minorField.nextToken();//HEIGHT
-//			focusName =  profiles.get(content);
-//			addToHash(profiles, focusName, content);
-//		}
-//		if (minorField.hasMoreTokens()) {
-//			content ="WEIGHT"+minorField.nextToken();//PARSEWEIGHT 
-//			focusName =  profiles.get(content);
-//			addToHash(profiles, focusName, content);
-//		}
-//		
-//		int attributeIndex = 0;
-// 		int minorIndex=0;
-//		ProfileAttributesField[] attributes = User.ProfileAttributesField.values();
-//		while (field.hasMoreTokens()) {
-//			String attributiveField =  field.nextToken();
-//			if (!attributiveField.equals("null")) {
-//				minorField=new StringTokenizer(attributiveField, ",");
-//				minorIndex=0;
-//				while(minorField.hasMoreTokens()){
-//					String minor = minorField.nextToken();
-//					while (minor.startsWith(" ")&&minor.length()>1) {
-//						minor=minor.substring(1);
-//					}
-//					String minorAttribute =attributes[attributeIndex].get(minorIndex).toString()
-//					content =minorAttribute+minor;
-//					focusName = profiles.get(content);
-//					if (focusName==null) {
-//					profiles.put(content, minorAttribute+attributeCounter++);
-//					}
-//					minorIndex++
-//
-//				}
-//			}
-//			attributeIndex++;
-//		}
-//	}
-//
-//
-//	
-//}
+private static void writeFocus(File profileInfoFile) throws IOException {
+//	BufferedReader reader=new BufferedReader(new FileReader(networkFile));
+	RandomAccessFile reader=new RandomAccessFile(profileInfoFile,"r");
+	
+	File fileToWrite = new File("FocusNetworkOf"+profileInfoFile.getName());
+	fileToWrite.createNewFile();
+	BufferedWriter writer = new BufferedWriter(new FileWriter(fileToWrite));
+	System.out.println("Inizio Analisi");
+	
+	byte[] b = new byte[(int) reader.length()];
+	reader.readFully(b);
+	String all =new String(b);
+	b=null;
+	StringTokenizer rows = new StringTokenizer(all,"\n");
+	all=null;
+	long percent=-1;
+	int line = 0;
+	int count = rows.countTokens();
+	long percentTmp;
+	ConcurrentHashMap<String, String> profiles=new ConcurrentHashMap<String, String>();
+	String focusName;
+	String content;
+	int regionCounter=0;
+	ProfileAttributesField[] attributes = User.ProfileAttributesField.values();
+	int[] attributeCounter=new int[attributes.length];
+	while (rows.hasMoreTokens()) {
+		StringTokenizer field=new StringTokenizer(rows.nextToken(), "\t\r\n");
+		StringTokenizer minorField;
+		String currentid = field.nextToken();
+		content="PUBLIC"+field.nextToken();
+		if (!content.contains("null")) {
+			focusName = profiles.get(content);//PUBLIC
+			focusName =addToHash(profiles, focusName, content);
+			append(writer,currentid,focusName);
+		}
+		
+		field.nextToken();//skip percentual
+		
+		content="isMALE"+field.nextToken();
+		if (!content.contains("null")) {
+			focusName = profiles.get(content);//ISMALE
+			focusName =addToHash(profiles, focusName, content);
+			append(writer,currentid,focusName);
+		}
+
+		
+		content="REGION"+field.nextToken();
+		if (!content.contains("null")) {
+			focusName = profiles.get(content);//REGION
+			if (focusName==null) {
+				focusName =  "REGION"+regionCounter++;
+				profiles.put(content, focusName);
+			}
+			append(writer,currentid,focusName);
+		}
+
+		field.nextToken();//skip last_login=
+		field.nextToken();//skip registration
+		
+		int number=Integer.parseInt(field.nextToken());
+		
+		content="AGE"+number/NUMBER_OF_NUMBER_CATEGORY;
+		if (!content.contains("null")) {
+			focusName = profiles.get(content);//AGE
+			focusName = addToHash(profiles, focusName, content);
+			append(writer,currentid,focusName);
+		}
+
+		content = field.nextToken();
+		if (!content.contains("null")) {
+			minorField=new StringTokenizer(content, ",");
+			if (minorField.hasMoreTokens()) {
+				try{
+				number=removeUnit(minorField.nextToken());
+				content = "HEIGHT"+number/NUMBER_OF_NUMBER_CATEGORY;//HEIGHT
+				if (!content.contains("null")) {
+					focusName =  profiles.get(content);
+					focusName =addToHash(profiles, focusName, content);
+					append(writer,currentid,focusName);
+				}
+				}catch(NumberFormatException e){				}
+			}
+			if (minorField.hasMoreTokens()) {
+				try{
+				number=removeUnit(minorField.nextToken());
+				content ="WEIGHT"+number/NUMBER_OF_NUMBER_CATEGORY;//WEIGHT 
+				if (!content.contains("null")) {
+					focusName =  profiles.get(content);
+					focusName =addToHash(profiles, focusName, content);
+					append(writer,currentid,focusName);
+				}
+				}catch(NumberFormatException e){				}
+			}
+		}
+		
+		int attributeIndex = 0;
+		while (field.hasMoreTokens()) {
+			String attributiveField =  field.nextToken();
+			if (attributiveField.length()>0&&!attributiveField.equals("null")) {
+				minorField=new StringTokenizer(attributiveField, ",");
+				while(minorField.hasMoreTokens()){
+					String minor = minorField.nextToken();
+					while (minor.startsWith(" ")&&minor.length()>1) {
+						minor=minor.substring(1);
+					}
+					String minorAttribute =attributes[attributeIndex].toString();
+					content =minorAttribute+minor;
+					focusName = profiles.get(content);
+					if (focusName==null) {
+						focusName =minorAttribute+attributeCounter[attributeIndex]++;
+						profiles.put(content,focusName );
+					}
+					append(writer,currentid,focusName);
 
 
-
-
-private static void addToHash(ConcurrentHashMap<String, String> profiles,
-		String focusName, String content) {
-	if (focusName==null) {
-		profiles.put(content, content);
+				}
+			}
+			attributeIndex++;
+		}
+		line+=100;
+		percentTmp = (line)/count;
+		if (percentTmp!=percent) {
+			percent=(int)percentTmp;
+			System.out.println(percent+"%");
+		}
 	}
+	writer.flush();
+	writer.close();
+
+	
+}
+
+private static Integer removeUnit(String nextToken) {
+		return Integer.parseInt(nextToken.replaceAll(" |kg|cm", ""));
+		
 }
 
 
-File fileToWrite = new File("FocusOf"+networkFile.getName());
-fileToWrite.createNewFile();
-BufferedWriter writer = new BufferedWriter(new FileWriter(fileToWrite));
+private static void append(BufferedWriter writer, String currentid, String focusName) throws IOException {
+	writer.append(currentid+","+focusName+"\n");
+}
+
+
+
+
+private static String addToHash(ConcurrentHashMap<String, String> profiles,
+		String focusName, String content) {
+	if (focusName==null) {
+		profiles.put(content, content);
+		return content;
+	}
+	return focusName;
+}
+
+
 
 
 private static File getFile(String[] args) throws IOException {
