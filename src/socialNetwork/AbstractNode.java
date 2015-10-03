@@ -87,32 +87,39 @@ public abstract class AbstractNode implements Serializable{
 		return outDegree;
 	}
 	
-	public long triadricClosure(){
+	public double triadricClosure(){
 		Collection<DirectionalLink> list = getAdiacencyList();
-		Collection<DirectionalLink> listOfMyTarget;
-		long hit=0;
+		if (list.isEmpty()) {
+			return 0;
+		}
+			
+		double hit=0;
 		boolean gotHit;
-		long numberOfFriendWithATriangle=0;//TODO
-		long closedTriangles;
+//		double numberOfFriendWithATriangle=0.0;
+		double closedTriangles;
 		for (DirectionalLink directionalLink : list) {
 			AbstractNode target = directionalLink.getTarget();
-			closedTriangles = getTrianglesClosed(hit, target);
+			closedTriangles = getTrianglesClosed(target);
+			
 			if (closedTriangles>0) {
 				hit += closedTriangles;
-				numberOfFriendWithATriangle++;
+//				numberOfFriendWithATriangle++;
 			}
 		}
-		return hit;
+		return hit/list.size();
 	}
 
-	private long getTrianglesClosed(long hit, AbstractNode target) {
-		Collection<DirectionalLink> listOfMyTarget;
-		listOfMyTarget = target.getAdiacencyList();
+	private double getTrianglesClosed(AbstractNode target) {
+		Collection<DirectionalLink> listOfMyTarget = target.getAdiacencyList();
+		if (listOfMyTarget.isEmpty()) {
+			return 0;
+		}
+		double hit=0;
 		for (DirectionalLink targetOfMyTarget : listOfMyTarget) {
 			if (isAdiacentNode(targetOfMyTarget.getTarget())) {
 				hit++;
 			}
 		}
-		return hit;
+		return hit/listOfMyTarget.size();
 	}
 }

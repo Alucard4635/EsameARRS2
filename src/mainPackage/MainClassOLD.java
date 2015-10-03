@@ -111,7 +111,7 @@ private static void writeHomofiliaValues()
 		
 //		writeConcurrency(nodeIDString,nodeTargetString,writer, reader);
 		try {
-			write(writer,nodeIDString+","+nodeTargetString+","+Double.toString(calculateHomofilia(nodeIDString,nodeTargetString))+"\n");
+			write(writer,nodeIDString+","+nodeTargetString+","+(Integer.toString((int)(calculateHomofilia(nodeIDString,nodeTargetString)*100.0)))+"\n");
 		} catch (Exception e) {
 		}
 		printPercentuale(reader);

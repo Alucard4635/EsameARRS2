@@ -19,17 +19,19 @@ public class GraphParser {
 				break;
 			}
 			nodeToken=new StringTokenizer(link,delim);
-			String nodeOne = nodeToken.nextToken();
-			String nodeTWO = nodeToken.nextToken();
-			weight=0;
 			if (nodeToken.hasMoreTokens()) {
-				weight = Double.parseDouble( nodeToken.nextToken());
+				String nodeOne = nodeToken.nextToken();
+				String nodeTWO = nodeToken.nextToken();
+				weight=0;
+				if (nodeToken.hasMoreTokens()) {
+					weight = Double.parseDouble( nodeToken.nextToken());
+				}
+				if (caller==null||!nodeOne.equals(caller.getId())) {
+					caller = graph.getNode(nodeOne);
+				}
+				AbstractNode target=graph.getNode(nodeTWO);
+				caller.directionalLink(target,weight);
 			}
-			if (caller==null||!nodeOne.equals(caller.getId())) {
-				caller = graph.getNode(nodeOne);
-			}
-			AbstractNode target=graph.getNode(nodeTWO);
-			caller.directionalLink(target,weight);
 			}
 		return graph;
 	}
@@ -50,18 +52,20 @@ public class GraphParser {
 			if (link==null) {
 				break;
 			}
-			nodeToken=new StringTokenizer(link,delim);
-			String nodeOne = nodeToken.nextToken();
-			String FocusName = nodeToken.nextToken();
-//			weight=0;
-//			if (nodeToken.hasMoreTokens()) {
-//				weight = Double.parseDouble( nodeToken.nextToken());
-//			}
-			if (caller==null||!nodeOne.equals(caller.getId())) {
-				caller = graph.getNode(nodeOne);
-			}
-			Focus target=graph.getFocus(FocusName);
-			target.enroll(caller);
+				nodeToken=new StringTokenizer(link,delim);
+				if (nodeToken.hasMoreTokens()) {
+				String nodeOne = nodeToken.nextToken();
+				String FocusName = nodeToken.nextToken();
+	//			weight=0;
+	//			if (nodeToken.hasMoreTokens()) {
+	//				weight = Double.parseDouble( nodeToken.nextToken());
+	//			}
+				if (caller==null||!nodeOne.equals(caller.getId())) {
+					caller = graph.getNode(nodeOne);
+				}
+				Focus target=graph.getFocus(FocusName);
+				target.enroll(caller);
+				}
 			}
 		return graph;
 	}

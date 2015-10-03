@@ -28,7 +28,7 @@ import socialNetwork.GraphParser;
 
 public class GraphFileSplitter {
 	
-private static final int DISTANCE_TARGET = 2;
+private static final int DISTANCE_TARGET = 3;
 private static File networkFile;
 private static Graph graph;
 private static File directorySplit;
@@ -69,13 +69,13 @@ private static Graph graphCreation() throws IOException {
 		long line = 0;
 		int percent=0;
 		long percentTmp;
-		
+		reader.close();
+
 		reader=new BufferedReader(new FileReader(networkFile));
 		lines = reader.lines();
-		
 		graph = GraphParser.parse(lines, "\t");
-		
 		reader.close();
+		
 		writeCache(fileCache);
 		line+=100;
 		percentTmp = (line)/count;
@@ -113,70 +113,67 @@ private static void splitGraph() throws IOException {
 	//StringBuilder stringBuilder=null;
 
 	for (String id : allNodes) {
-		System.out.println(id);
 		firstNode = graph.getNode(id);
-		if (allNodes.remove(id)) {
-			distance = 0;
-			fileToWrite=flush(fileToWrite);
-			//stringBuilder=getBuilder(stringBuilder);
-			toVisit.add(firstNode);
-			nodeCurrentDistance = 1;
-			while (!toVisit.isEmpty()) {
-				currentNode = toVisit.pop();
-				adiacency=currentNode.getAdiacencyList();
-				fileHash.put(currentNode.getId(), fileToWrite);
+		distance = 0;
+		fileToWrite=flush(fileToWrite);
+		//stringBuilder=getBuilder(stringBuilder);
+		toVisit.add(firstNode);
+		nodeCurrentDistance = 1;
+		while (!toVisit.isEmpty()) {
+			currentNode = toVisit.pop();
+			adiacency=currentNode.getAdiacencyList();
+			fileHash.put(currentNode.getId(), fileToWrite);
 
-				//add this node to filehash
-				
-				nodeCurrentDistance--;
-				nodeWrited+=100;
-				status = nodeWrited/size;
-				
-				
-				for (DirectionalLink link : adiacency) {
-					target = link.getTarget();
-					targetID = target.getId();
-					if (allNodes.remove(targetID)) {
-						if (fileHash.get(targetID)==null) {
-							fileHash.put(targetID, fileToWrite);
-						}
-						
-						toVisit.add(target);
-						
-						appendLink(currentNode, targetID, fileToWrite);
+			//add this node to filehash
+			
+			nodeCurrentDistance--;
+			nodeWrited+=100;
+			status = nodeWrited/size;
+			
+			
+			for (DirectionalLink link : adiacency) {
+				target = link.getTarget();
+				targetID = target.getId();
+				if (allNodes.remove(targetID)) {
+//					if (fileHash.get(targetID)==null) {
+//						fileHash.put(targetID, fileToWrite);
+//					}
+					
+					toVisit.add(target);
+					
+//					appendLink(currentNode, targetID, fileToWrite);
 
+				}/*else {
+					BufferedWriter oldFile = fileHash.get(targetID);
+					if (fileToWrite.equals(oldFile)) {
+						appendLink(currentNode, targetID, oldFile);
+						fileHash.put(targetID, oldFile);
 					}else {
-						BufferedWriter oldFile = fileHash.get(targetID);
-						if (fileToWrite.equals(oldFile)) {
-							appendLink(currentNode, targetID, oldFile);
-							fileHash.put(targetID, oldFile);
-						}else {
-							appendLink(currentNode, targetID, fileToWrite);
-							fileHash.put(targetID, fileToWrite);
-						}
+						fileHash.put(targetID, fileToWrite);
 					}
+				}*/
+				appendLink(currentNode, targetID, fileToWrite);
 //					stringBuilder.append(currentNode.getId());
 //					stringBuilder.append("\t");
 //					stringBuilder.append(targetID);
 //					stringBuilder.append("\n");
-					
+				
+			}
+			if (status!=percent) {
+				percent=status;
+				System.out.println(percent+"%");
+			}
+			if(nodeCurrentDistance==0){
+				distance++;
+				System.out.println("dis: "+distance);
+				nodeCurrentDistance=toVisit.size();
+				if (distance==DISTANCE_TARGET) {
+					fileToWrite=flush(fileToWrite);
+					//stringBuilder=getBuilder(stringBuilder);
+					distance = 0;
+					nodeCurrentDistance=1;
 				}
-				if (status!=percent) {
-					percent=status;
-					System.out.println(percent+"%");
-				}
-				if(nodeCurrentDistance==0){
-					distance++;
-					System.out.println("dis: "+distance);
-					nodeCurrentDistance=toVisit.size();
-					if (distance==DISTANCE_TARGET) {
-						fileToWrite=flush(fileToWrite);
-						//stringBuilder=getBuilder(stringBuilder);
-						distance = 0;
-						nodeCurrentDistance=1;
-					}
-					
-				}
+				
 			}
 		}
 	}

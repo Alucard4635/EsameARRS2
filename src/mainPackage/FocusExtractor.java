@@ -63,6 +63,7 @@ private static void writeFocus(File profileInfoFile) throws IOException {
 	int regionCounter=0;
 	ProfileAttributesField[] attributes = User.ProfileAttributesField.values();
 	int[] attributeCounter=new int[attributes.length];
+	int number;
 	while (rows.hasMoreTokens()) {
 		StringTokenizer field=new StringTokenizer(rows.nextToken(), "\t\r\n");
 		StringTokenizer minorField;
@@ -96,15 +97,16 @@ private static void writeFocus(File profileInfoFile) throws IOException {
 
 		field.nextToken();//skip last_login=
 		field.nextToken();//skip registration
-		
-		int number=Integer.parseInt(field.nextToken());
-		
-		content="AGE"+number/NUMBER_OF_NUMBER_CATEGORY;
-		if (!content.contains("null")) {
-			focusName = profiles.get(content);//AGE
-			focusName = addToHash(profiles, focusName, content);
-			append(writer,currentid,focusName);
-		}
+		try{
+			number = Integer.parseInt(field.nextToken());
+			
+			content="AGE"+number/NUMBER_OF_NUMBER_CATEGORY;
+			if (!content.contains("null")) {
+				focusName = profiles.get(content);//AGE
+				focusName = addToHash(profiles, focusName, content);
+				append(writer,currentid,focusName);
+			}
+		}catch(NumberFormatException e){				}
 
 		content = field.nextToken();
 		if (!content.contains("null")) {
