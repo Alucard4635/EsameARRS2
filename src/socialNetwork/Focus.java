@@ -5,6 +5,10 @@ import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Focus implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8555153057871406532L;
 	private String focusId;
 	
 	public Focus(String id) {
@@ -24,9 +28,12 @@ public class Focus implements Serializable {
 		return nodes;
 	}
 	
-	public long focusClousure(){
-		long hit=0;
+	public double getFocusClousure(){
+		double hit=0.0;
 		Collection<AbstractNode> myNodes = nodes.values();
+		if (myNodes.isEmpty()) {
+			return 0.0;
+		}
 		for (AbstractNode node : myNodes) {
 			for (AbstractNode target : myNodes) {
 				if (node.isAdiacentNode(target)) {
@@ -34,19 +41,47 @@ public class Focus implements Serializable {
 				}
 			}
 		}
-		return hit;
+		return (hit/myNodes.size())/myNodes.size();
 	}
 	
-	public long membershipClousure(){
-		long hit=0;
+	public double getMembershipClousure(){
+		double hit=0.0;
 		Collection<AbstractNode> myNodes = nodes.values();
 		for (AbstractNode node : myNodes) {
-			for (DirectionalLink targetlink : node.getAdiacencyList()) {
-				if (nodes.get(targetlink.getTarget().getId())!=null) {
-					hit++;
-				}
-			}
+			hit += getMembershipClousure(node);
 		}
 		return hit;
+	}
+
+	public double getMembershipClousure(AbstractNode node) {
+		double hit=0.0;
+		Collection<DirectionalLink> adiacencyList = node.getAdiacencyList();
+		if(adiacencyList.isEmpty()){
+			return 0;
+		}
+		
+		for (DirectionalLink targetlink : adiacencyList) {
+			String targetID = targetlink.getTarget().getId();
+			if (nodes.get(targetID)!=null) {
+				hit++;
+			}
+		}
+		return hit/adiacencyList.size();
+	}
+
+	public String getId() {
+		return focusId;
+	}
+
+	public void setId(String focusId) {
+		this.focusId = focusId;
+	}
+	@Override
+	public int hashCode() {
+		return focusId.hashCode();
+	}
+	@Override
+	public String toString() {
+		return focusId;
 	}
 }

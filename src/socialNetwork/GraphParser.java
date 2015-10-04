@@ -9,6 +9,14 @@ public class GraphParser {
 	public static Graph parse(Stream<String> lines,String delim) {
 		Graph graph;
 		graph = new Graph();
+		return parse(lines, delim, graph);
+	}
+//	private void createGraphComponent(String nodeID, String nodeTarget, double weight, Graph graph) {
+//		
+//
+//	}non usato, inglobato in parse
+
+	private static Graph parse(Stream<String> lines, String delim, Graph graph) {
 		String link;
 		StringTokenizer nodeToken;
 		double weight;
@@ -35,17 +43,18 @@ public class GraphParser {
 			}
 		return graph;
 	}
-//	private void createGraphComponent(String nodeID, String nodeTarget, double weight, Graph graph) {
-//		
-//
-//	}non usato, inglobato in parse
 	
 	public static Graph parseFocusGraph(Stream<String> lines,String delim) {
 		Graph graph;
 		graph = new Graph();
+		return parseFocus(lines, delim, graph);
+	}
+
+	public static Graph parseFocus(Stream<String> lines, String delim,
+			Graph graph) {
 		String link;
 		StringTokenizer nodeToken;
-//		double weight;
+		double weight;
 		AbstractNode caller = null;
 		for (Iterator<String> iterator = lines.iterator(); iterator.hasNext();) {
 			link = (String) iterator.next();
@@ -55,11 +64,12 @@ public class GraphParser {
 				nodeToken=new StringTokenizer(link,delim);
 				if (nodeToken.hasMoreTokens()) {
 				String nodeOne = nodeToken.nextToken();
+				System.out.println(nodeOne);
 				String FocusName = nodeToken.nextToken();
-	//			weight=0;
-	//			if (nodeToken.hasMoreTokens()) {
-	//				weight = Double.parseDouble( nodeToken.nextToken());
-	//			}
+				weight=0;
+				if (nodeToken.hasMoreTokens()) {
+					weight = Double.parseDouble( nodeToken.nextToken());
+				}
 				if (caller==null||!nodeOne.equals(caller.getId())) {
 					caller = graph.getNode(nodeOne);
 				}

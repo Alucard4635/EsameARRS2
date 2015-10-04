@@ -50,9 +50,9 @@ public static void main(String[] args) {
 //			writeCache(fileCache,graph);
 		}
 		System.out.println("Evaluation");
-		ConcurrentHashMap<AbstractNode,Integer> toWrite=calculateAllTriadricClousure(graph);
+		ConcurrentHashMap<AbstractNode,Integer> toWritetriadic=calculateAllTriadricClousure(graph);
 		File csv=new File("TriadicClousureOF"+networkFile.getName());
-		writeCsv(toWrite,csv);
+		writeCsv(toWritetriadic,csv);
 		System.out.println("Fine");
 	} catch (FileNotFoundException e) {
 		e.printStackTrace();
