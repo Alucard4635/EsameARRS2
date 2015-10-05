@@ -26,7 +26,7 @@ import socialNetwork.DirectionalLink;
 import socialNetwork.Graph;
 import socialNetwork.GraphParser;
 
-
+@Deprecated
 public class GraphTriadricEvaluator {
 	
 private static final int DISTANCE_TARGET = 2;

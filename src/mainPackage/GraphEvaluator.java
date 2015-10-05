@@ -33,6 +33,13 @@ import socialNetwork.GraphParser;
 
 
 public class GraphEvaluator {
+
+	private static final String WEIGHT = "WEIGHT";
+	private static final String HEIGHT = "HEIGHT";
+	private static final String AGE = "AGE";
+	private static final String REGION = "REGION";
+	private static final String IS_MALE = "isMALE";
+	private static final String PUBLIC = "PUBLIC";
 	private static final int NUMBER_OF_NUMBER_CATEGORY = 10;
 
 public static void main(String[] args) {
@@ -279,31 +286,31 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 		StringTokenizer field=new StringTokenizer(rows.nextToken(), "\t\r\n");
 		StringTokenizer minorField;
 		String currentid = field.nextToken();
-		content="PUBLIC"+field.nextToken();
+		content=PUBLIC+field.nextToken();
 		if (!content.contains("null")) {
 			focusName = profiles.get(content);//PUBLIC
 			focusName =addToHash(profiles, focusName, content);
-			append(writer,currentid,focusName);
+			append(writer,currentid,focusName,0, content);
 		}
 		
 		field.nextToken();//skip percentual
 		
-		content="isMALE"+field.nextToken();
+		content=IS_MALE+field.nextToken();
 		if (!content.contains("null")) {
 			focusName = profiles.get(content);//ISMALE
 			focusName =addToHash(profiles, focusName, content);
-			append(writer,currentid,focusName);
+			append(writer,currentid,focusName, 0, content);
 		}
 
 		
-		content="REGION"+field.nextToken();
+		content=REGION+field.nextToken();
 		if (!content.contains("null")) {
 			focusName = profiles.get(content);//REGION
 			if (focusName==null) {
-				focusName =  "REGION"+regionCounter++;
+				focusName =  REGION+regionCounter++;
 				profiles.put(content, focusName);
 			}
-			append(writer,currentid,focusName);
+			append(writer,currentid,focusName, 0, content);
 		}
 
 		field.nextToken();//skip last_login=
@@ -311,11 +318,11 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 		try{
 			number = Integer.parseInt(field.nextToken());
 			
-			content="AGE"+number/NUMBER_OF_NUMBER_CATEGORY;
+			content=AGE+number/NUMBER_OF_NUMBER_CATEGORY;
 			if (!content.contains("null")) {
 				focusName = profiles.get(content);//AGE
 				focusName = addToHash(profiles, focusName, content);
-				append(writer,currentid,focusName);
+				append(writer,currentid,focusName, 0, content);
 			}
 		}catch(NumberFormatException e){				}
 
@@ -325,22 +332,22 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 			if (minorField.hasMoreTokens()) {
 				try{
 				number=removeUnit(minorField.nextToken());
-				content = "HEIGHT"+number/NUMBER_OF_NUMBER_CATEGORY;//HEIGHT
+				content = HEIGHT+number/NUMBER_OF_NUMBER_CATEGORY;//HEIGHT
 				if (!content.contains("null")) {
 					focusName =  profiles.get(content);
 					focusName =addToHash(profiles, focusName, content);
-					append(writer,currentid,focusName);
+					append(writer,currentid,focusName, 0, content);
 				}
 				}catch(NumberFormatException e){				}
 			}
 			if (minorField.hasMoreTokens()) {
 				try{
 				number=removeUnit(minorField.nextToken());
-				content ="WEIGHT"+number/NUMBER_OF_NUMBER_CATEGORY;//WEIGHT 
+				content =WEIGHT+number/NUMBER_OF_NUMBER_CATEGORY;//WEIGHT 
 				if (!content.contains("null")) {
 					focusName =  profiles.get(content);
 					focusName =addToHash(profiles, focusName, content);
-					append(writer,currentid,focusName);
+					append(writer,currentid,focusName, 0, content);
 				}
 				}catch(NumberFormatException e){				}
 			}
@@ -363,7 +370,7 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 						focusName =minorAttribute+attributeCounter[attributeIndex]++;
 						profiles.put(content,focusName );
 					}
-					append(writer,currentid,focusName);
+					append(writer,currentid,focusName, 0, content);
 
 
 				}
@@ -381,6 +388,10 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 	writer.close();
 	return fileToWrite;
 }
+private static void append(BufferedWriter writer, String currentid, String focusName,double weight, String content) throws IOException {
+	writer.append(currentid+","+focusName+","+weight+","+content+"\n");
+}
+
 
 private static Integer removeUnit(String nextToken) {
 		return Integer.parseInt(nextToken.replaceAll(" |kg|cm", ""));
