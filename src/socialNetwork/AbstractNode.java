@@ -90,6 +90,7 @@ public abstract class AbstractNode implements Serializable{
 	public double triadricClosure(){
 		Collection<DirectionalLink> list = getAdiacencyList();
 		if (list.isEmpty()) {
+
 			return 0;
 		}
 			
@@ -120,6 +121,7 @@ public abstract class AbstractNode implements Serializable{
 				hit++;
 			}
 		}
+
 		return hit/listOfMyTarget.size();
 	}
 }

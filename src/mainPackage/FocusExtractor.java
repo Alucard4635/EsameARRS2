@@ -168,7 +168,6 @@ private static void writeFocus(File profileInfoFile) throws IOException {
 	}
 	writer.flush();
 	writer.close();
-
 	
 }
 

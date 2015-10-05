@@ -11,10 +11,6 @@ public class GraphParser {
 		graph = new Graph();
 		return parse(lines, delim, graph);
 	}
-//	private void createGraphComponent(String nodeID, String nodeTarget, double weight, Graph graph) {
-//		
-//
-//	}non usato, inglobato in parse
 
 	private static Graph parse(Stream<String> lines, String delim, Graph graph) {
 		String link;
@@ -64,7 +60,6 @@ public class GraphParser {
 				nodeToken=new StringTokenizer(link,delim);
 				if (nodeToken.hasMoreTokens()) {
 				String nodeOne = nodeToken.nextToken();
-				System.out.println(nodeOne);
 				String FocusName = nodeToken.nextToken();
 				weight=0;
 				if (nodeToken.hasMoreTokens()) {

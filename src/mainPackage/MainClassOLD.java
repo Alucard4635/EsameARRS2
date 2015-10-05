@@ -1,8 +1,10 @@
 package mainPackage;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
@@ -24,10 +26,10 @@ import dataAnalysis.DataArrayException.DataExceptionType;
 
 public class MainClassOLD {
 	
+private static final String DATA_ARRAY_SEPARATING_CHARS = "\t";
+private static final int DATA_ARRAY_STARTING_SIZE = 1632803;
 private static final int WAIT_TIME = 50;
 private static final int NUMBER_OF_THREAD = 8;
-private static File networkFile;
-private static File profileInfoFile;
 private static DataArray profiles;
 private static User userCaller;
 private static User userTarget;
@@ -38,12 +40,13 @@ private static Object ThreadNodeIDString;
 private static Collection<Long> threadNodeTargetList;
 
 public static void main(String[] args) {
-	networkFile = null;
+	File networkFile = null;
+	File profileInfoFile=null;
+
 	try {
 		networkFile = getFile(args);
 		profileInfoFile = getFile(args);
-		//splitFile(networkFile,profileInfoFile);
-		writeHomofiliaValues();
+		writeHomofiliaValues(networkFile,profileInfoFile);
 	} catch (FileNotFoundException e) {
 		e.printStackTrace();
 	} catch (IOException e) {
@@ -83,16 +86,16 @@ private static void splitFile(File...f ) throws IOException {
 
 }
 
-private static void writeHomofiliaValues()
+private static void writeHomofiliaValues(File networkFile, File profileInfoFile)
 		throws FileNotFoundException, IOException, DataArrayException{
 	RandomAccessFile reader=new RandomAccessFile(networkFile, "r");
 	System.out.println("Indicizzo");
-	profiles=new DataArray(profileInfoFile,1632803,OrderType.BY_FIRST_WORD,"\t");
+	profiles=new DataArray(profileInfoFile,DATA_ARRAY_STARTING_SIZE,OrderType.BY_FIRST_WORD,DATA_ARRAY_SEPARATING_CHARS);
 	System.out.println("Inizio Analisi");
-	RandomAccessFile writer=new RandomAccessFile(new File("ResultOf"+networkFile.getName()), "rw");
+	BufferedWriter writer=new BufferedWriter(new FileWriter("ResultOf"+networkFile.getName()));
 	
-	pool=new OrderedThreadPool<ThreadHomophiliaCalculator>(NUMBER_OF_THREAD,WAIT_TIME);
-	threadNodeTargetList=new LinkedList<Long>();
+//	pool=new OrderedThreadPool<ThreadHomophiliaCalculator>(NUMBER_OF_THREAD,WAIT_TIME);
+//	threadNodeTargetList=new LinkedList<Long>();
 	
 	long length = reader.length();
 	String arcToBuild;
@@ -111,11 +114,13 @@ private static void writeHomofiliaValues()
 		
 //		writeConcurrency(nodeIDString,nodeTargetString,writer, reader);
 		try {
-			write(writer,nodeIDString+","+nodeTargetString+","+(Integer.toString((int)(calculateHomofilia(nodeIDString,nodeTargetString)*100.0)))+"\n");
+			writer.append(nodeIDString+","+nodeTargetString+","+(Integer.toString((int)(calculateHomofilia(nodeIDString,nodeTargetString)*100.0)))+"\n");
 		} catch (Exception e) {
 		}
 		printPercentuale(reader);
 	}
+	writer.flush();
+	writer.close();
 //	completeWriting(writer);
 	System.out.println("Fine");
 
