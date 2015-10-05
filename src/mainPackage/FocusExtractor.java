@@ -177,6 +177,9 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 	writer.close();
 	return fileToWrite;
 }
+private static void append(BufferedWriter writer, String currentid, String focusName,double weight, String content) throws IOException {
+	writer.append(currentid+","+focusName+","+weight+","+content+"\n");
+}
 
 private static Integer removeUnit(String nextToken) {
 		return Integer.parseInt(nextToken.replaceAll(" |kg|cm", ""));
@@ -184,9 +187,6 @@ private static Integer removeUnit(String nextToken) {
 }
 
 
-private static void append(BufferedWriter writer, String currentid, String focusName,double weight, String content) throws IOException {
-	writer.append(currentid+","+focusName+","+weight+","+content+"\n");
-}
 
 
 
