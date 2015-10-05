@@ -19,7 +19,7 @@ import dataAnalysis.DataArray.OrderType;
 import dataAnalysis.DataArrayException.DataExceptionType;
 
 
-public class profileExtractor {
+public class ProfileExtractor {
 	
 private static final String DATAARRAY_SEPARATING_CHARS = "\t";
 
