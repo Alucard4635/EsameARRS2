@@ -28,23 +28,26 @@ public class MainClassOLD {
 	
 private static final String DATA_ARRAY_SEPARATING_CHARS = "\t";
 private static final int DATA_ARRAY_STARTING_SIZE = 1632803;
-private static final int WAIT_TIME = 50;
+/*private static final int WAIT_TIME = 50;
 private static final int NUMBER_OF_THREAD = 8;
+private static StringBuilder buffer=new StringBuilder();
+private static OrderedThreadPool<ThreadHomophiliaCalculator> pool;
+private static Object ThreadNodeIDString;
+private static Collection<Long> threadNodeTargetList;*/
+private static final String RELATION_SEPARATING_CHARS = "\t";
 private static DataArray profiles;
 private static User userCaller;
 private static User userTarget;
 private static double percentualePrecedente=-1;
-private static StringBuilder buffer=new StringBuilder();
-private static OrderedThreadPool<ThreadHomophiliaCalculator> pool;
-private static Object ThreadNodeIDString;
-private static Collection<Long> threadNodeTargetList;
 
 public static void main(String[] args) {
 	File networkFile = null;
 	File profileInfoFile=null;
 
 	try {
+		JOptionPane.showMessageDialog(null, "Select Tab Separated Network File", "Network", JOptionPane.INFORMATION_MESSAGE);
 		networkFile = getFile(args);
+		JOptionPane.showMessageDialog(null, "Select Line Separated Proflie File", "Profile Info", JOptionPane.INFORMATION_MESSAGE);
 		profileInfoFile = getFile(args);
 		writeHomofiliaValues(networkFile,profileInfoFile);
 	} catch (FileNotFoundException e) {
@@ -64,27 +67,6 @@ public static void main(String[] args) {
 	
 }
 
-private static void splitFile(File...f ) throws IOException {
-	File file;
-	String line;
-	RandomAccessFile reader;
-	RandomAccessFile writer;
-	for (int i = 0; i < f.length; i++) {
-		file = f[i];
-		reader = new RandomAccessFile(file, "r");
-		writer = new RandomAccessFile(new File("ResultOf"+file.getName()), "rw");
-		long length = reader.length();
-		long lines = 0;
-		while (lines<10000&&reader.getFilePointer()<length) {
-			line = reader.readLine();
-			writer.writeBytes(line+"\n");
-			System.out.println(lines);
-			lines++;
-		}
-
-	}
-
-}
 
 private static void writeHomofiliaValues(File networkFile, File profileInfoFile)
 		throws FileNotFoundException, IOException, DataArrayException{
@@ -108,7 +90,7 @@ private static void writeHomofiliaValues(File networkFile, File profileInfoFile)
 		if (arcToBuild==null) {
 			break;
 		}
-		nodeToken=new StringTokenizer(arcToBuild,"\t");
+		nodeToken=new StringTokenizer(arcToBuild,RELATION_SEPARATING_CHARS);
 		nodeIDString = nodeToken.nextToken();
 		nodeTargetString = nodeToken.nextToken();
 		
@@ -126,7 +108,7 @@ private static void writeHomofiliaValues(File networkFile, File profileInfoFile)
 
 }
 
-private static void completeWriting(RandomAccessFile writer) throws IOException {
+/*private static void completeWriting(RandomAccessFile writer) throws IOException {
 	Collection<ThreadHomophiliaCalculator> threadUnwited = pool.getThread();
 	for (ThreadHomophiliaCalculator calculator : threadUnwited) {
 		if (calculator!=null) {
@@ -134,7 +116,7 @@ private static void completeWriting(RandomAccessFile writer) throws IOException 
 		}
 	}
 	writer.close();
-}
+}*/
 
 private static void printPercentuale(RandomAccessFile reader) throws IOException {
 	int percentuale = (int) (((double)(reader.getFilePointer()))/(reader.length()/100.0));
@@ -146,7 +128,7 @@ private static void printPercentuale(RandomAccessFile reader) throws IOException
 
 
 
-private static void writeConcurrency(String nodeIDString,
+/*private static void writeConcurrency(String nodeIDString,
 		String nodeTargetString, RandomAccessFile writer, RandomAccessFile reader) {
 	if (ThreadNodeIDString==null) {
 		ThreadNodeIDString=nodeIDString;
@@ -171,7 +153,6 @@ private static void writeConcurrency(String nodeIDString,
 		}
 		threadNodeTargetList=new LinkedList<Long>();
 	}
-}
 
 private static void write(RandomAccessFile writer, String string) throws IOException {
 	buffer.append(string);
@@ -181,6 +162,7 @@ private static void write(RandomAccessFile writer, String string) throws IOExcep
 	}
 	
 }
+ */
 
 private static double calculateHomofilia(String nodeIDString, String nodeTargetString) throws IOException, DataArrayException {
 	long nodeID=Long.parseLong(nodeIDString);

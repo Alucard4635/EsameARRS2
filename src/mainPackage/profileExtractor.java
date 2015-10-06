@@ -3,40 +3,36 @@ package mainPackage;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Stream;
-
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
-import concurrenceClasses.OrderedThreadPool;
-import concurrenceClasses.ThreadHomophiliaCalculator;
 import dataAnalysis.DataArray;
 import dataAnalysis.DataArrayException;
-import dataAnalysis.User;
 import dataAnalysis.DataArray.OrderType;
 import dataAnalysis.DataArrayException.DataExceptionType;
 
 
-public class profileExtractor {
+public class ProfileExtractor {
 	
+private static final String DATAARRAY_SEPARATING_CHARS = "\t";
+
+
+
+
 public static void main(String[] args) {
 	File networkFile = null;
 	File profileInfoFile=null;
 	try {
+		JOptionPane.showMessageDialog(null, "Select tab Separated Network File", "Network", JOptionPane.INFORMATION_MESSAGE);
 		networkFile = getFile(args);
+		JOptionPane.showMessageDialog(null, "Select Line Separated Proflie File", "Profile Info", JOptionPane.INFORMATION_MESSAGE);
 		profileInfoFile = getFile(args);
 		getProfiles(networkFile,profileInfoFile);
 	} catch (FileNotFoundException e) {
@@ -64,7 +60,7 @@ private static void getProfiles(File networkFile, File profileInfoFile) throws I
 	RandomAccessFile reader=new RandomAccessFile(networkFile,"r");
 
 	System.out.println("Indicizzo");
-	DataArray dataProfiles = new DataArray(profileInfoFile,1632803,OrderType.BY_FIRST_WORD,"\t");
+	DataArray dataProfiles = new DataArray(profileInfoFile,1632803,OrderType.BY_FIRST_WORD,DATAARRAY_SEPARATING_CHARS);
 	System.out.println("Inizio Analisi");
 	File fileToWrite = new File("ProfileOf"+networkFile.getName());
 	fileToWrite.createNewFile();

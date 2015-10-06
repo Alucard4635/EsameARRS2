@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap.KeySetView;
 import java.util.stream.Stream;
 
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 import dataAnalysis.User;
 import dataAnalysis.User.ProfileAttributesField;
@@ -33,6 +34,14 @@ import socialNetwork.GraphParser;
 
 
 public class GraphEvaluator {
+
+	private static final String DELIM = ",";
+	private static final String WEIGHT = "WEIGHT";
+	private static final String HEIGHT = "HEIGHT";
+	private static final String AGE = "AGE";
+	private static final String REGION = "REGION";
+	private static final String IS_MALE = "isMALE";
+	private static final String PUBLIC = "PUBLIC";
 	private static final int NUMBER_OF_NUMBER_CATEGORY = 10;
 
 public static void main(String[] args) {
@@ -40,7 +49,9 @@ public static void main(String[] args) {
 	File focusFile=null;
 	File profileInfoFile=null;
 	try {
+		JOptionPane.showMessageDialog(null, "Select Comma Separated Network File", "Network", JOptionPane.INFORMATION_MESSAGE);
 		networkFile = getFile(args);
+		JOptionPane.showMessageDialog(null, "Select Line Separated Proflie File", "Profile Info", JOptionPane.INFORMATION_MESSAGE);
 		profileInfoFile = getFile(args);
 		focusFile=new File("FocusNetworkOf"+profileInfoFile.getName());
 		if (!focusFile.exists()) {
@@ -85,7 +96,7 @@ private static void writeCsvMembershipClousure(LinkedList<Object[]> toWriteMembe
 	BufferedWriter writer=new BufferedWriter(new FileWriter(csv));
 	for (int i = 0; i < toWriteMembership.size(); i++) {
 		Object[] line = toWriteMembership.pop();
-		writer.append(line[0]+","+line[1]+","+line[2]+"\n");
+		writer.append(line[0]+DELIM+line[1]+DELIM+line[2]+"\n");
 	}
 	writer.flush();
 	writer.close();
@@ -119,7 +130,7 @@ private static void writeCsvTriadicClousure(ConcurrentHashMap<AbstractNode, Inte
 	BufferedWriter writer=new BufferedWriter(new FileWriter(csv));
 	KeySetView<AbstractNode, Integer> keySet = toWritetriadic.keySet();
 	for (AbstractNode aNode : keySet) {
-		writer.append(aNode.getId()+","+toWritetriadic.get(aNode)+"\n");
+		writer.append(aNode.getId()+DELIM+toWritetriadic.get(aNode)+"\n");
 	}
 	writer.flush();
 	writer.close();
@@ -140,7 +151,7 @@ private static void writeCsvFocusClousure(ConcurrentHashMap<Focus,Integer> toWri
 	BufferedWriter writer=new BufferedWriter(new FileWriter(file));
 	KeySetView<Focus,Integer> keySet = toWrite.keySet();
 	for (Focus aFocus : keySet) {
-		writer.append(aFocus.getId()+","+toWrite.get(aFocus)+"\n");
+		writer.append(aFocus.getId()+DELIM+toWrite.get(aFocus)+"\n");
 	}
 	writer.flush();
 	writer.close();
@@ -192,7 +203,7 @@ private static Graph parseFocus(File focusFile, Graph graph) throws IOException 
 
 	reader=new BufferedReader(new FileReader(focusFile));
 	lines = reader.lines();
-	graph = GraphParser.parseFocus(lines, ",",graph);
+	graph = GraphParser.parseFocus(lines, DELIM,graph);
 	reader.close();
 	
 	
@@ -218,7 +229,7 @@ private static Graph parseNetwork(File networkFile)
 
 	reader=new BufferedReader(new FileReader(networkFile));
 	lines = reader.lines();
-	graph = GraphParser.parse(lines, ",");
+	graph = GraphParser.parse(lines, DELIM);
 	reader.close();
 	
 	
@@ -279,31 +290,31 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 		StringTokenizer field=new StringTokenizer(rows.nextToken(), "\t\r\n");
 		StringTokenizer minorField;
 		String currentid = field.nextToken();
-		content="PUBLIC"+field.nextToken();
+		content=PUBLIC+field.nextToken();
 		if (!content.contains("null")) {
 			focusName = profiles.get(content);//PUBLIC
 			focusName =addToHash(profiles, focusName, content);
-			append(writer,currentid,focusName);
+			append(writer,currentid,focusName,0, content);
 		}
 		
 		field.nextToken();//skip percentual
 		
-		content="isMALE"+field.nextToken();
+		content=IS_MALE+field.nextToken();
 		if (!content.contains("null")) {
 			focusName = profiles.get(content);//ISMALE
 			focusName =addToHash(profiles, focusName, content);
-			append(writer,currentid,focusName);
+			append(writer,currentid,focusName, 0, content);
 		}
 
 		
-		content="REGION"+field.nextToken();
+		content=REGION+field.nextToken();
 		if (!content.contains("null")) {
 			focusName = profiles.get(content);//REGION
 			if (focusName==null) {
-				focusName =  "REGION"+regionCounter++;
+				focusName =  REGION+regionCounter++;
 				profiles.put(content, focusName);
 			}
-			append(writer,currentid,focusName);
+			append(writer,currentid,focusName, 0, content);
 		}
 
 		field.nextToken();//skip last_login=
@@ -311,36 +322,36 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 		try{
 			number = Integer.parseInt(field.nextToken());
 			
-			content="AGE"+number/NUMBER_OF_NUMBER_CATEGORY;
+			content=AGE+number/NUMBER_OF_NUMBER_CATEGORY;
 			if (!content.contains("null")) {
 				focusName = profiles.get(content);//AGE
 				focusName = addToHash(profiles, focusName, content);
-				append(writer,currentid,focusName);
+				append(writer,currentid,focusName, 0, content);
 			}
 		}catch(NumberFormatException e){				}
 
 		content = field.nextToken();
 		if (!content.contains("null")) {
-			minorField=new StringTokenizer(content, ",");
+			minorField=new StringTokenizer(content, DELIM);
 			if (minorField.hasMoreTokens()) {
 				try{
 				number=removeUnit(minorField.nextToken());
-				content = "HEIGHT"+number/NUMBER_OF_NUMBER_CATEGORY;//HEIGHT
+				content = HEIGHT+number/NUMBER_OF_NUMBER_CATEGORY;//HEIGHT
 				if (!content.contains("null")) {
 					focusName =  profiles.get(content);
 					focusName =addToHash(profiles, focusName, content);
-					append(writer,currentid,focusName);
+					append(writer,currentid,focusName, 0, content);
 				}
 				}catch(NumberFormatException e){				}
 			}
 			if (minorField.hasMoreTokens()) {
 				try{
 				number=removeUnit(minorField.nextToken());
-				content ="WEIGHT"+number/NUMBER_OF_NUMBER_CATEGORY;//WEIGHT 
+				content =WEIGHT+number/NUMBER_OF_NUMBER_CATEGORY;//WEIGHT 
 				if (!content.contains("null")) {
 					focusName =  profiles.get(content);
 					focusName =addToHash(profiles, focusName, content);
-					append(writer,currentid,focusName);
+					append(writer,currentid,focusName, 0, content);
 				}
 				}catch(NumberFormatException e){				}
 			}
@@ -350,7 +361,7 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 		while (field.hasMoreTokens()) {
 			String attributiveField =  field.nextToken();
 			if (attributiveField.length()>0&&!attributiveField.equals("null")) {
-				minorField=new StringTokenizer(attributiveField, ",");
+				minorField=new StringTokenizer(attributiveField, DELIM);
 				while(minorField.hasMoreTokens()){
 					String minor = minorField.nextToken();
 					while (minor.startsWith(" ")&&minor.length()>1) {
@@ -363,7 +374,7 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 						focusName =minorAttribute+attributeCounter[attributeIndex]++;
 						profiles.put(content,focusName );
 					}
-					append(writer,currentid,focusName);
+					append(writer,currentid,focusName, 0, content);
 
 
 				}
@@ -381,6 +392,10 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 	writer.close();
 	return fileToWrite;
 }
+private static void append(BufferedWriter writer, String currentid, String focusName,double weight, String content) throws IOException {
+	writer.append(currentid+DELIM+focusName+DELIM+weight+DELIM+content+"\n");
+}
+
 
 private static Integer removeUnit(String nextToken) {
 		return Integer.parseInt(nextToken.replaceAll(" |kg|cm", ""));
@@ -389,7 +404,7 @@ private static Integer removeUnit(String nextToken) {
 
 
 private static void append(BufferedWriter writer, String currentid, String focusName) throws IOException {
-	writer.append(currentid+","+focusName+"\n");
+	writer.append(currentid+DELIM+focusName+"\n");
 }
 
 
