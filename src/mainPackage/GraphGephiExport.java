@@ -62,7 +62,7 @@ public class GraphGephiExport {
 	private static final int NUMBER_OF_NUMBER_CATEGORY = 10;
 	private static final float MAX_EDGE_SIZE = MAX_NODE_SIZE*0.3f;
 	private static final float MIN_EDGE_SIZE =MIN_NODE_SIZE*0.8f;
-	private static final String[] SELECTED_FOCUS = {};
+	private static final String[] SELECTED_FOCUS = {AGE, User.ProfileAttributesField.I_LIKE_MOVIES.toString()};
 	private static JScrollPane panelForFocusSelection;
 	private static JFrame frame;
 	private static JPanel panelComboBox;
