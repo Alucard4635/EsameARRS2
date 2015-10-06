@@ -1,6 +1,11 @@
 package mainPackage;
 
 import java.awt.Color;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.ScrollPane;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -23,7 +28,16 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentHashMap.KeySetView;
 import java.util.stream.Stream;
 
+import javafx.scene.control.ComboBox;
+
+import javax.swing.BoxLayout;
+import javax.swing.ComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 import org.gephi.data.attributes.api.AttributeColumn;
 import org.gephi.data.attributes.api.AttributeType;
@@ -52,7 +66,10 @@ public class GraphGephiExport {
 	private static final int NUMBER_OF_NUMBER_CATEGORY = 10;
 	private static final float MAX_EDGE_SIZE = MAX_NODE_SIZE*0.3f;
 	private static final float MIN_EDGE_SIZE =MIN_NODE_SIZE*0.8f;
-	private static final String[] SELECTED_FOCUS = {AGE,User.ProfileAttributesField.HOBBIES.toString(),User.ProfileAttributesField.HOBBIES_INTERESTS.toString()};
+	private static final String[] SELECTED_FOCUS = {};
+	private static JScrollPane panelForFocusSelection;
+	private static JFrame frame;
+	private static JPanel panelComboBox;
 
 public static void main(String[] args) {
 	File networkFile = null;
@@ -79,7 +96,9 @@ public static void main(String[] args) {
 		
 		LinkedList<Object[]> membershipEvaluation=calculateAllMembershipClousure(graph);
 		
-		createGephiExporter(graph,triadricEvaluation,focusEvaluation,membershipEvaluation).export("GephiExportOf"+networkFile.getName());
+		//showGUI();
+		
+			createGephiExporter(graph,triadricEvaluation,focusEvaluation,membershipEvaluation).export("GephiExportOf"+networkFile.getName());
 		
 		System.out.println("Fine");
 	} catch (FileNotFoundException e) {
@@ -87,6 +106,53 @@ public static void main(String[] args) {
 	} catch (IOException e) {
 		e.printStackTrace();
 	}
+}
+
+private static void showGUI() {
+	frame = new JFrame();
+	Container container = frame.getContentPane();
+	container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+	panelComboBox = new JPanel();
+	panelForFocusSelection = new JScrollPane();
+	panelForFocusSelection.getViewport().setLayout(new BoxLayout(panelForFocusSelection.getViewport(), BoxLayout.X_AXIS));
+
+	panelComboBox.add(panelForFocusSelection);
+	container.add(panelComboBox);
+	JButton plus = new JButton("+");
+	container.add(plus);
+	JButton ok = new JButton("OK");
+	container.add(ok);
+	
+	ok.addActionListener(new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {frame.setVisible(false);}});
+	plus.addActionListener(new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {GraphGephiExport.addAComboBox();}});
+	panelForFocusSelection.setPreferredSize(new Dimension(300, 200));
+	frame.pack();
+	frame.setMinimumSize(frame.getSize());
+	frame.setVisible(true);
+	}
+private static void addAComboBox() {
+	JComboBox<String> jComboBox = new JComboBox<String>(getFocusStartingNames());
+	jComboBox.setMaximumSize(new Dimension(300,25));
+	panelForFocusSelection.getViewport().add(jComboBox);
+	panelForFocusSelection.repaint();
+}
+private static String[] getFocusStartingNames() {
+	ProfileAttributesField[] values = User.ProfileAttributesField.values();
+	String[] labels=new String[values.length+User.NUMBERO_OF_NON_FILLABLE_FIELD-1];
+	labels[5]= WEIGHT ;
+	labels[4]= HEIGHT ;
+	labels[3]= AGE ;
+	labels[2]= REGION ;
+	labels[1]= IS_MALE ;
+	labels[0]= PUBLIC ;
+	for (int i = User.NUMBERO_OF_NON_FILLABLE_FIELD; i < labels.length; i++) {
+		labels[i]=values[i-User.NUMBERO_OF_NON_FILLABLE_FIELD].toString();
+	}
+	return labels;
 }
 
 private static GephiExporter createGephiExporter(Graph graph,
