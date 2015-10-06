@@ -3,7 +3,6 @@ package mainPackage;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.ScrollPane;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -21,23 +20,19 @@ import java.io.ObjectOutputStream;
 import java.io.RandomAccessFile;
 import java.util.Collection;
 import java.util.Enumeration;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentHashMap.KeySetView;
 import java.util.stream.Stream;
 
-import javafx.scene.control.ComboBox;
-
 import javax.swing.BoxLayout;
-import javax.swing.ComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JOptionPane;
 
 import org.gephi.data.attributes.api.AttributeColumn;
 import org.gephi.data.attributes.api.AttributeType;
@@ -55,6 +50,7 @@ import socialNetwork.GraphParser;
 
 
 public class GraphGephiExport {
+	private static final String DELIM = ",";
 	private static final String WEIGHT = "WEIGHT";
 	private static final String HEIGHT = "HEIGHT";
 	private static final String AGE = "AGE";
@@ -76,8 +72,10 @@ public static void main(String[] args) {
 	File focusFile=null;
 	File profileInfoFile=null;
 	try {
+		JOptionPane.showMessageDialog(null, "Select Comma Separated Network File", "Network", JOptionPane.INFORMATION_MESSAGE);
 		networkFile = getFile(args);
-		profileInfoFile = getFile(args);
+		JOptionPane.showMessageDialog(null, "Select Line Separated Proflie File", "Profile Info", JOptionPane.INFORMATION_MESSAGE);
+			profileInfoFile = getFile(args);
 		//focusFile=new File("FocusNetworkOf"+profileInfoFile.getName());
 	//	if (!focusFile.exists()) {
 			focusFile=writeFocus(profileInfoFile);
@@ -295,7 +293,7 @@ private static ConcurrentHashMap<AbstractNode,Integer> calculateAllTriadricClous
 
 private static Graph graphCreation(File networkFile, File focusFile) throws IOException {
 	System.out.println(">Parsing Node Network");
-	Graph graph = parseNetwork(networkFile,",");//TODO replace with ","
+	Graph graph = parseNetwork(networkFile,DELIM);
 	System.out.println(">Parsing Focus Network");
 	return parseFocus(focusFile,graph);
 }
@@ -311,7 +309,7 @@ private static Graph parseFocus(File focusFile, Graph graph) throws IOException 
 
 	reader=new BufferedReader(new FileReader(focusFile));
 	lines = reader.lines();
-	graph = GraphParser.parseFocus(lines, ",",graph);
+	graph = GraphParser.parseFocus(lines, DELIM,graph);
 	reader.close();
 	
 	
@@ -440,7 +438,7 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 
 		content = field.nextToken();
 		if (!content.contains("null")) {
-			minorField=new StringTokenizer(content, ",");
+			minorField=new StringTokenizer(content, DELIM);
 			if (minorField.hasMoreTokens()) {
 				try{
 				number=removeUnit(minorField.nextToken());
@@ -469,7 +467,7 @@ private static File writeFocus(File profileInfoFile) throws IOException {
 		while (field.hasMoreTokens()) {
 			String attributiveField =  field.nextToken();
 			if (attributiveField.length()>0&&!attributiveField.equals("null")) {
-				minorField=new StringTokenizer(attributiveField, ",");
+				minorField=new StringTokenizer(attributiveField, DELIM);
 				while(minorField.hasMoreTokens()){
 					String minor = minorField.nextToken();
 					while (minor.startsWith(" ")&&minor.length()>1) {
@@ -508,7 +506,7 @@ private static Integer removeUnit(String nextToken) {
 
 
 private static void append(BufferedWriter writer, String currentid, String focusName,double weight, String content) throws IOException {
-	writer.append(currentid+","+focusName+","+weight+","+content+"\n");
+	writer.append(currentid+DELIM+focusName+DELIM+weight+DELIM+content+"\n");
 }
 
 
