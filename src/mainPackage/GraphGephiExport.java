@@ -113,6 +113,7 @@ public static void main(String[] args) {
 private static void showGUI() {
 	listOfComboBox=new LinkedList<JComboBox<String>>();
 	frame = new JFrame();
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	Container container = frame.getContentPane();
 	container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
 	panelComboBox = new JPanel();
@@ -138,6 +139,7 @@ private static void showGUI() {
 				e1.printStackTrace();
 			}
 			System.out.println("Fine");
+			System.exit(0);
 		}
 		private void setSELECTED_FOCUS() {
 			selectedFocus=new String[listOfComboBox.size()];
@@ -153,6 +155,7 @@ private static void showGUI() {
 	panelForFocusSelection.setPreferredSize(new Dimension(300, 200));
 	frame.pack();
 	frame.setMinimumSize(frame.getSize());
+	addAComboBox();
 	frame.setVisible(true);
 	}
 
