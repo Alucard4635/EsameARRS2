@@ -93,6 +93,8 @@ public static void main(String[] args) {
 			
 		}
 		System.out.println(">Evaluation");
+		JOptionPane.showMessageDialog(null, "Inizio calcolo delle chiusure relazionali, si prega di aspettare...", "Avviso", JOptionPane.INFORMATION_MESSAGE);
+
 		triadricEvaluation = calculateAllTriadricClousure(graph);
 		
 		focusEvaluation = calculateAllFocusClousure(graph);
