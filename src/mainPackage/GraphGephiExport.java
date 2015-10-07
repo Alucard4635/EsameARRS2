@@ -62,13 +62,19 @@ public class GraphGephiExport {
 	private static final int NUMBER_OF_NUMBER_CATEGORY = 10;
 	private static final float MAX_EDGE_SIZE = MAX_NODE_SIZE*0.3f;
 	private static final float MIN_EDGE_SIZE =MIN_NODE_SIZE*0.8f;
-	private static final String[] SELECTED_FOCUS = {AGE, User.ProfileAttributesField.I_LIKE_MOVIES.toString()};
+	private static String[] selectedFocus ;
 	private static JScrollPane panelForFocusSelection;
 	private static JFrame frame;
 	private static JPanel panelComboBox;
+	private static File networkFile;
+	private static ConcurrentHashMap<AbstractNode,Integer> triadricEvaluation;
+	private static ConcurrentHashMap<Focus,Integer> focusEvaluation;
+	private static LinkedList<Object[]> membershipEvaluation;
+	private static Graph graph;
+	private static LinkedList<JComboBox<String>> listOfComboBox;
 
 public static void main(String[] args) {
-	File networkFile = null;
+	networkFile = null;
 	File focusFile=null;
 	File profileInfoFile=null;
 	try {
@@ -79,8 +85,7 @@ public static void main(String[] args) {
 		//focusFile=new File("FocusNetworkOf"+profileInfoFile.getName());
 	//	if (!focusFile.exists()) {
 			focusFile=writeFocus(profileInfoFile);
-	//	}
-		Graph graph=null;
+	graph = null;
 
 		if (graph==null) {
 			System.out.println(">Creation of graph");
@@ -88,17 +93,16 @@ public static void main(String[] args) {
 			
 		}
 		System.out.println(">Evaluation");
-		ConcurrentHashMap<AbstractNode,Integer> triadricEvaluation=calculateAllTriadricClousure(graph);
+		triadricEvaluation = calculateAllTriadricClousure(graph);
 		
-		ConcurrentHashMap<Focus,Integer> focusEvaluation=calculateAllFocusClousure(graph);
+		focusEvaluation = calculateAllFocusClousure(graph);
 		
-		LinkedList<Object[]> membershipEvaluation=calculateAllMembershipClousure(graph);
+		membershipEvaluation = calculateAllMembershipClousure(graph);
 		
-		//showGUI();
+		showGUI();
 		
-			createGephiExporter(graph,triadricEvaluation,focusEvaluation,membershipEvaluation).export("GephiExportOf"+networkFile.getName());
+		//createGephiExporter(graph,triadricEvaluation,focusEvaluation,membershipEvaluation).export("GephiExportOf"+networkFile.getName());
 		
-		System.out.println("Fine");
 	} catch (FileNotFoundException e) {
 		e.printStackTrace();
 	} catch (IOException e) {
@@ -107,15 +111,16 @@ public static void main(String[] args) {
 }
 
 private static void showGUI() {
+	listOfComboBox=new LinkedList<JComboBox<String>>();
 	frame = new JFrame();
 	Container container = frame.getContentPane();
 	container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
 	panelComboBox = new JPanel();
+	panelComboBox.setLayout(new BoxLayout(panelComboBox, BoxLayout.Y_AXIS));
 	panelForFocusSelection = new JScrollPane();
-	panelForFocusSelection.getViewport().setLayout(new BoxLayout(panelForFocusSelection.getViewport(), BoxLayout.X_AXIS));
-
-	panelComboBox.add(panelForFocusSelection);
-	container.add(panelComboBox);
+	
+	panelForFocusSelection.getViewport().add(panelComboBox);
+	container.add(panelForFocusSelection);
 	JButton plus = new JButton("+");
 	container.add(plus);
 	JButton ok = new JButton("OK");
@@ -123,7 +128,25 @@ private static void showGUI() {
 	
 	ok.addActionListener(new ActionListener() {
 		@Override
-		public void actionPerformed(ActionEvent e) {frame.setVisible(false);}});
+		public void actionPerformed(ActionEvent e) {
+			frame.setVisible(false);
+			setSELECTED_FOCUS();
+			try {
+				createGephiExporter(graph,triadricEvaluation,focusEvaluation,membershipEvaluation)
+					.export("GephiExportOf"+networkFile.getName());
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+			System.out.println("Fine");
+		}
+		private void setSELECTED_FOCUS() {
+			selectedFocus=new String[listOfComboBox.size()];
+			int i=0;
+			for (JComboBox<String> jComboBox : listOfComboBox) {
+				selectedFocus[i++]=jComboBox.getSelectedItem().toString();
+			}
+		}
+		});
 	plus.addActionListener(new ActionListener() {
 		@Override
 		public void actionPerformed(ActionEvent e) {GraphGephiExport.addAComboBox();}});
@@ -132,11 +155,14 @@ private static void showGUI() {
 	frame.setMinimumSize(frame.getSize());
 	frame.setVisible(true);
 	}
+
 private static void addAComboBox() {
 	JComboBox<String> jComboBox = new JComboBox<String>(getFocusStartingNames());
+	listOfComboBox.add(jComboBox);
 	jComboBox.setMaximumSize(new Dimension(300,25));
-	panelForFocusSelection.getViewport().add(jComboBox);
-	panelForFocusSelection.repaint();
+	panelComboBox.add(jComboBox);
+	panelComboBox.revalidate();
+	panelComboBox.repaint();
 }
 private static String[] getFocusStartingNames() {
 	ProfileAttributesField[] values = User.ProfileAttributesField.values();
@@ -208,8 +234,8 @@ private static GephiExporter createGephiExporter(Graph graph,
 	Enumeration<Focus> allFocus = focusEvaluation.keys();
 	while (allFocus.hasMoreElements()) {
 		Focus aFocus = (Focus) allFocus.nextElement();
-		for (int i = 0; i < SELECTED_FOCUS.length; i++) {
-			if (aFocus.getId().startsWith(SELECTED_FOCUS[i].toString())) {
+		for (int i = 0; i < selectedFocus.length; i++) {
+			if (aFocus.getId().startsWith(selectedFocus[i].toString())) {
 				Node focusNode = gephi.getNode(aFocus.getId(), (aFocus.getId().toLowerCase()));
 				gephi.addNode(focusNode);
 				gephi.setAttributeValue(focusNode, focusColum, focusEvaluation.get(aFocus));
@@ -224,8 +250,8 @@ private static GephiExporter createGephiExporter(Graph graph,
 	for (Object[] focusLink : membershipEvaluation) {
 		AbstractNode aEnrolledNode=(AbstractNode) focusLink[0];
 		Focus aFocus=(Focus) focusLink[1];
-		for (int i = 0; i < SELECTED_FOCUS.length; i++) {
-			if (aFocus.getId().startsWith(SELECTED_FOCUS[i].toString())) {
+		for (int i = 0; i < selectedFocus.length; i++) {
+			if (aFocus.getId().startsWith(selectedFocus[i].toString())) {
 				int membershipClousure=(int) focusLink[2];
 				Node node = gephi.getNode(aEnrolledNode.getId());
 				Node focusNode = gephi.getNode(aFocus.getId());

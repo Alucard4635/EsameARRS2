@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.2draft" version="1.2" xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
-  <meta lastmodifieddate="2015-10-06">
+  <meta lastmodifieddate="2015-10-07">
     <creator>Gephi 0.8.1</creator>
     <description></description>
   </meta>
@@ -18,7 +18,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-204.91461" y="-331.77563" z="0.0"></viz:position>
+        <viz:position x="-437.76013" y="-94.97003" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="97254">
@@ -27,7 +27,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-57.070557" y="387.87866" z="0.0"></viz:position>
+        <viz:position x="480.5542" y="338.5044" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="258225">
@@ -36,7 +36,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-105.876465" y="106.10071" z="0.0"></viz:position>
+        <viz:position x="499.20068" y="38.56714" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="489392">
@@ -45,7 +45,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-253.3181" y="477.1222" z="0.0"></viz:position>
+        <viz:position x="131.90155" y="507.01685" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="278393">
@@ -54,7 +54,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-38.44345" y="375.65436" z="0.0"></viz:position>
+        <viz:position x="-50.131683" y="-412.70908" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="73887">
@@ -63,7 +63,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="130.82281" y="133.33832" z="0.0"></viz:position>
+        <viz:position x="-388.11273" y="-203.59488" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1029526">
@@ -72,7 +72,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="373.0736" y="129.24274" z="0.0"></viz:position>
+        <viz:position x="-316.21588" y="321.831" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1630557">
@@ -81,7 +81,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-139.44037" y="-172.29721" z="0.0"></viz:position>
+        <viz:position x="237.48889" y="120.43384" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1552187">
@@ -90,7 +90,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-397.47913" y="409.9572" z="0.0"></viz:position>
+        <viz:position x="-341.1568" y="286.0727" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1035139">
@@ -99,7 +99,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="295.04163" y="33.25244" z="0.0"></viz:position>
+        <viz:position x="159.47522" y="225.31793" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="224956">
@@ -108,7 +108,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="464.66376" y="-198.55945" z="0.0"></viz:position>
+        <viz:position x="139.5133" y="287.78412" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="37050">
@@ -117,7 +117,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="336.58228" y="89.32892" z="0.0"></viz:position>
+        <viz:position x="-179.24307" y="-367.23993" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1630555">
@@ -126,7 +126,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-455.19772" y="-460.50403" z="0.0"></viz:position>
+        <viz:position x="-171.57513" y="24.20398" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1699">
@@ -135,7 +135,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-441.9181" y="-29.054504" z="0.0"></viz:position>
+        <viz:position x="-413.85526" y="381.9655" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="730904">
@@ -144,7 +144,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="249.35095" y="495.43304" z="0.0"></viz:position>
+        <viz:position x="273.93677" y="-318.38934" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="69082">
@@ -153,7 +153,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="505.75232" y="236.78998" z="0.0"></viz:position>
+        <viz:position x="-468.78485" y="-205.09131" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="587321">
@@ -162,7 +162,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-79.714386" y="363.94226" z="0.0"></viz:position>
+        <viz:position x="243.03839" y="157.4624" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1127900">
@@ -171,7 +171,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="73.65729" y="368.0514" z="0.0"></viz:position>
+        <viz:position x="382.86884" y="501.82043" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1127899">
@@ -180,7 +180,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="496.3971" y="92.395996" z="0.0"></viz:position>
+        <viz:position x="-418.04156" y="19.518433" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="67332">
@@ -189,7 +189,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="277.2492" y="429.98657" z="0.0"></viz:position>
+        <viz:position x="-484.70154" y="132.80975" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1465518">
@@ -198,7 +198,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="275.58258" y="-426.1784" z="0.0"></viz:position>
+        <viz:position x="326.10638" y="-61.577484" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1466350">
@@ -207,7 +207,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-285.00665" y="489.11823" z="0.0"></viz:position>
+        <viz:position x="-277.53427" y="406.73022" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="516970">
@@ -216,7 +216,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="434.94214" y="-107.60315" z="0.0"></viz:position>
+        <viz:position x="466.4831" y="-391.45035" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1004482">
@@ -225,7 +225,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="500.3382" y="501.18256" z="0.0"></viz:position>
+        <viz:position x="211.82031" y="-170.15396" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="851255">
@@ -234,7 +234,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="99.23926" y="-41.83319" z="0.0"></viz:position>
+        <viz:position x="-168.54791" y="106.487" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="232108">
@@ -243,7 +243,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="470.70227" y="448.42224" z="0.0"></viz:position>
+        <viz:position x="-106.123566" y="-145.45316" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="229697">
@@ -252,7 +252,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-86.67789" y="196.78558" z="0.0"></viz:position>
+        <viz:position x="0.77297974" y="227.34119" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="520024">
@@ -261,7 +261,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="35.812744" y="349.54492" z="0.0"></viz:position>
+        <viz:position x="-421.60504" y="142.30902" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="320874">
@@ -270,7 +270,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="270.391" y="70.43524" z="0.0"></viz:position>
+        <viz:position x="33.055054" y="-413.86633" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="937961">
@@ -279,7 +279,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="114.64514" y="391.6474" z="0.0"></viz:position>
+        <viz:position x="130.30225" y="-474.7084" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1618281">
@@ -288,7 +288,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-424.46207" y="-402.32227" z="0.0"></viz:position>
+        <viz:position x="58.297363" y="174.86615" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1608226">
@@ -297,7 +297,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="228.37744" y="-159.37253" z="0.0"></viz:position>
+        <viz:position x="-12.889801" y="367.40576" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1630608">
@@ -306,7 +306,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="74.73685"></viz:size>
-        <viz:position x="182.7716" y="-287.15344" z="0.0"></viz:position>
+        <viz:position x="463.93976" y="-374.59067" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630622">
@@ -315,7 +315,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-33.81363" y="-424.91263" z="0.0"></viz:position>
+        <viz:position x="-305.5169" y="288.38702" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630615">
@@ -324,7 +324,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="58.289474"></viz:size>
-        <viz:position x="-66.218506" y="259.68585" z="0.0"></viz:position>
+        <viz:position x="485.85583" y="-355.81274" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630616">
@@ -333,7 +333,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="58.289474"></viz:size>
-        <viz:position x="-278.62354" y="58.45453" z="0.0"></viz:position>
+        <viz:position x="277.73206" y="-366.6513" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630617">
@@ -342,7 +342,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="50.394737"></viz:size>
-        <viz:position x="-452.01712" y="-350.70264" z="0.0"></viz:position>
+        <viz:position x="504.97888" y="-43.299194" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630614">
@@ -351,7 +351,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="64.210526"></viz:size>
-        <viz:position x="-192.75177" y="315.0252" z="0.0"></viz:position>
+        <viz:position x="334.39844" y="-354.5127" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630611">
@@ -360,7 +360,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="66.184204"></viz:size>
-        <viz:position x="465.92487" y="-270.94382" z="0.0"></viz:position>
+        <viz:position x="245.75684" y="-371.74615" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630609">
@@ -369,7 +369,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="73.42105"></viz:size>
-        <viz:position x="-194.72519" y="7.861267" z="0.0"></viz:position>
+        <viz:position x="-293.2779" y="31.058899" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630610">
@@ -378,7 +378,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="69.47369"></viz:size>
-        <viz:position x="131.93036" y="207.00848" z="0.0"></viz:position>
+        <viz:position x="374.39264" y="-188.18445" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1632429">
@@ -387,7 +387,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="272.5703" y="29.947876" z="0.0"></viz:position>
+        <viz:position x="472.67194" y="493.43744" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630618">
@@ -396,7 +396,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="44.473686"></viz:size>
-        <viz:position x="116.879395" y="55.365784" z="0.0"></viz:position>
+        <viz:position x="-297.16733" y="-185.22632" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630619">
@@ -405,7 +405,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="39.210526"></viz:size>
-        <viz:position x="-258.70178" y="114.746155" z="0.0"></viz:position>
+        <viz:position x="-219.65045" y="-142.9855" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630574">
@@ -414,7 +414,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-71.668" y="-322.93857" z="0.0"></viz:position>
+        <viz:position x="318.7245" y="-126.597565" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1630483">
@@ -423,7 +423,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="279.58124" y="-151.74878" z="0.0"></viz:position>
+        <viz:position x="-257.0395" y="-398.1067" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1630623">
@@ -432,7 +432,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-167.26947" y="260.93744" z="0.0"></viz:position>
+        <viz:position x="482.07202" y="177.19055" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1630620">
@@ -441,7 +441,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="43.157894"></viz:size>
-        <viz:position x="-248.36192" y="121.89276" z="0.0"></viz:position>
+        <viz:position x="210.1781" y="-13.22467" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630621">
@@ -450,7 +450,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-476.79416" y="-326.0195" z="0.0"></viz:position>
+        <viz:position x="56.075928" y="494.74396" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1258097">
@@ -459,7 +459,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="314.2882" y="504.09222" z="0.0"></viz:position>
+        <viz:position x="-263.38983" y="450.1341" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="208085">
@@ -468,7 +468,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="6.55484" y="443.12793" z="0.0"></viz:position>
+        <viz:position x="-427.3482" y="218.79913" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1630605">
@@ -477,7 +477,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="76.05263"></viz:size>
-        <viz:position x="-382.37292" y="228.01636" z="0.0"></viz:position>
+        <viz:position x="479.21027" y="-351.2848" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1519763">
@@ -486,7 +486,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-345.75714" y="-135.4837" z="0.0"></viz:position>
+        <viz:position x="-227.61957" y="-230.04825" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1112881">
@@ -495,7 +495,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-360.409" y="494.0443" z="0.0"></viz:position>
+        <viz:position x="72.8584" y="317.5971" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1264988">
@@ -504,7 +504,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-35.174652" y="44.645935" z="0.0"></viz:position>
+        <viz:position x="-395.85153" y="77.02838" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1630600">
@@ -513,7 +513,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="77.36842"></viz:size>
-        <viz:position x="77.29303" y="-432.30823" z="0.0"></viz:position>
+        <viz:position x="-243.03098" y="117.49274" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630601">
@@ -522,7 +522,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="76.05263"></viz:size>
-        <viz:position x="218.9715" y="-274.21274" z="0.0"></viz:position>
+        <viz:position x="221.49817" y="286.59552" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630602">
@@ -531,7 +531,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="75.39474"></viz:size>
-        <viz:position x="-257.5735" y="-282.78812" z="0.0"></viz:position>
+        <viz:position x="155.86609" y="-227.33267" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630603">
@@ -540,7 +540,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="74.73685"></viz:size>
-        <viz:position x="-126.688416" y="77.05603" z="0.0"></viz:position>
+        <viz:position x="470.71155" y="-55.07547" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1632525">
@@ -549,7 +549,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="463.69586" y="379.81934" z="0.0"></viz:position>
+        <viz:position x="151.79944" y="96.79242" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="224667">
@@ -558,7 +558,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="235.61963" y="242.9353" z="0.0"></viz:position>
+        <viz:position x="-270.0873" y="-357.20215" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="40337">
@@ -567,7 +567,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-413.8501" y="71.46118" z="0.0"></viz:position>
+        <viz:position x="231.85828" y="-45.74716" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="986288">
@@ -576,7 +576,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-308.61963" y="332.62537" z="0.0"></viz:position>
+        <viz:position x="-271.02078" y="-483.13492" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="146919">
@@ -585,7 +585,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="275.45465" y="462.28394" z="0.0"></viz:position>
+        <viz:position x="-461.33" y="-189.13315" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="26568">
@@ -594,7 +594,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-489.4191" y="-293.54794" z="0.0"></viz:position>
+        <viz:position x="156.81158" y="60.82538" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="44416">
@@ -603,7 +603,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="484.55927" y="-271.57745" z="0.0"></viz:position>
+        <viz:position x="-390.34283" y="290.67676" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1574883">
@@ -612,7 +612,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="53.603943" y="-130.33182" z="0.0"></viz:position>
+        <viz:position x="445.51837" y="415.5351" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1463803">
@@ -621,7 +621,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-379.12906" y="-239.535" z="0.0"></viz:position>
+        <viz:position x="450.7563" y="74.41144" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="557249">
@@ -630,7 +630,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="16.391113" y="19.33136" z="0.0"></viz:position>
+        <viz:position x="110.33063" y="-320.79218" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="564250">
@@ -639,7 +639,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-336.03088" y="59.921143" z="0.0"></viz:position>
+        <viz:position x="157.88641" y="-449.58243" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1627555">
@@ -648,7 +648,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="207.5813" y="306.54578" z="0.0"></viz:position>
+        <viz:position x="419.5692" y="-192.80338" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="497534">
@@ -657,7 +657,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-272.94562" y="187.25201" z="0.0"></viz:position>
+        <viz:position x="-226.91272" y="-139.69702" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1374533">
@@ -666,7 +666,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="234.12097" y="174.20514" z="0.0"></viz:position>
+        <viz:position x="-29.255463" y="355.41595" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1112759">
@@ -675,7 +675,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-170.26031" y="438.49213" z="0.0"></viz:position>
+        <viz:position x="442.12988" y="369.22864" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="177168">
@@ -684,7 +684,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="386.87915" y="-290.52307" z="0.0"></viz:position>
+        <viz:position x="-43.123047" y="-337.71658" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="215863">
@@ -693,7 +693,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-44.542694" y="22.223389" z="0.0"></viz:position>
+        <viz:position x="226.53607" y="134.73328" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1604923">
@@ -702,7 +702,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-35.90796" y="-189.38187" z="0.0"></viz:position>
+        <viz:position x="-478.61548" y="61.13031" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1112639">
@@ -711,7 +711,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="303.6681" y="384.63672" z="0.0"></viz:position>
+        <viz:position x="115.324585" y="-351.83148" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1187830">
@@ -720,7 +720,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="247.9989" y="109.31616" z="0.0"></viz:position>
+        <viz:position x="-379.6094" y="368.351" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1484541">
@@ -729,7 +729,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="15.223877" y="487.64343" z="0.0"></viz:position>
+        <viz:position x="-119.563934" y="-20.731293" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="519288">
@@ -738,7 +738,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="358.82123" y="12.598206" z="0.0"></viz:position>
+        <viz:position x="238.06409" y="202.13092" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1619787">
@@ -747,7 +747,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="35.263157"></viz:size>
-        <viz:position x="-451.35245" y="-216.52524" z="0.0"></viz:position>
+        <viz:position x="424.67035" y="467.07336" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1575045">
@@ -756,7 +756,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="250.2757" y="-67.54486" z="0.0"></viz:position>
+        <viz:position x="-366.38907" y="-347.58582" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1579613">
@@ -765,7 +765,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="315.76068" y="348.93518" z="0.0"></viz:position>
+        <viz:position x="182.10382" y="269.36804" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1137817">
@@ -774,7 +774,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="182.10077" y="-243.32202" z="0.0"></viz:position>
+        <viz:position x="-462.2056" y="444.84045" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1007114">
@@ -783,7 +783,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="147.00061" y="143.45111" z="0.0"></viz:position>
+        <viz:position x="-51.663727" y="408.0019" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="708652">
@@ -792,7 +792,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="107.61572" y="-118.99603" z="0.0"></viz:position>
+        <viz:position x="-137.63104" y="19.703308" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1211915">
@@ -801,7 +801,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-350.0652" y="-362.71616" z="0.0"></viz:position>
+        <viz:position x="241.54993" y="428.888" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="289606">
@@ -810,7 +810,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-451.8803" y="-329.47498" z="0.0"></viz:position>
+        <viz:position x="-462.42932" y="-118.44919" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1579722">
@@ -819,7 +819,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-451.10657" y="119.75098" z="0.0"></viz:position>
+        <viz:position x="-74.75372" y="433.18536" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1628010">
@@ -828,7 +828,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-309.02173" y="47.40857" z="0.0"></viz:position>
+        <viz:position x="-449.18494" y="165.86963" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1628063">
@@ -837,7 +837,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-350.69464" y="-157.97147" z="0.0"></viz:position>
+        <viz:position x="359.65912" y="30.109741" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1610016">
@@ -846,7 +846,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-355.46704" y="12.33551" z="0.0"></viz:position>
+        <viz:position x="124.01013" y="-383.63434" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="786465">
@@ -855,7 +855,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="157.23657" y="-224.91861" z="0.0"></viz:position>
+        <viz:position x="-208.7757" y="-287.98724" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1513879">
@@ -864,7 +864,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="10.508759" y="298.66022" z="0.0"></viz:position>
+        <viz:position x="237.40155" y="69.67218" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1153251">
@@ -873,7 +873,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-297.2049" y="170.4972" z="0.0"></viz:position>
+        <viz:position x="38.121033" y="258.81622" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1405254">
@@ -882,7 +882,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="193.38464" y="31.148743" z="0.0"></viz:position>
+        <viz:position x="384.62378" y="103.88934" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1534444">
@@ -891,7 +891,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-434.52115" y="300.47437" z="0.0"></viz:position>
+        <viz:position x="-215.21951" y="41.58319" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1534280">
@@ -900,7 +900,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="156.22864" y="215.25403" z="0.0"></viz:position>
+        <viz:position x="-473.36127" y="-276.82336" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="166757">
@@ -909,7 +909,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="280.20844" y="-277.0577" z="0.0"></viz:position>
+        <viz:position x="-40.607727" y="-486.04803" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="229735">
@@ -918,7 +918,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-346.20856" y="118.237976" z="0.0"></viz:position>
+        <viz:position x="-298.49756" y="-177.30685" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1466564">
@@ -927,7 +927,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="14.700623" y="168.76837" z="0.0"></viz:position>
+        <viz:position x="-264.18" y="-244.64384" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="905122">
@@ -936,7 +936,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="326.18878" y="120.05145" z="0.0"></viz:position>
+        <viz:position x="-357.59378" y="-293.50262" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="321717">
@@ -945,7 +945,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-147.99866" y="-319.76794" z="0.0"></viz:position>
+        <viz:position x="-325.02792" y="-338.6031" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="20028">
@@ -954,7 +954,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="420.29272" y="409.7348" z="0.0"></viz:position>
+        <viz:position x="58.19867" y="115.59161" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="321762">
@@ -963,7 +963,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="386.4126" y="-56.575745" z="0.0"></viz:position>
+        <viz:position x="400.55524" y="264.43152" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1235617">
@@ -972,7 +972,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="320.99274" y="-17.79535" z="0.0"></viz:position>
+        <viz:position x="-61.399292" y="64.11487" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="556776">
@@ -981,7 +981,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-153.28946" y="-148.04477" z="0.0"></viz:position>
+        <viz:position x="-9.728363" y="-288.61496" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1534446">
@@ -990,7 +990,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-479.22702" y="-249.3584" z="0.0"></viz:position>
+        <viz:position x="360.58563" y="278.75824" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="376188">
@@ -999,7 +999,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="297.4665" y="215.33221" z="0.0"></viz:position>
+        <viz:position x="-44.096893" y="-374.01035" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="548763">
@@ -1008,7 +1008,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="133.59546" y="231.29749" z="0.0"></viz:position>
+        <viz:position x="-207.09842" y="189.79834" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="606737">
@@ -1017,7 +1017,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="337.44727" y="182.59381" z="0.0"></viz:position>
+        <viz:position x="284.35925" y="-60.900696" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="513607">
@@ -1026,7 +1026,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-432.13626" y="180.39062" z="0.0"></viz:position>
+        <viz:position x="-177.52548" y="231.7132" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="890106">
@@ -1035,7 +1035,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="113.48364" y="390.2649" z="0.0"></viz:position>
+        <viz:position x="-483.35184" y="-216.5758" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="521829">
@@ -1044,7 +1044,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-486.71555" y="-233.1394" z="0.0"></viz:position>
+        <viz:position x="-440.565" y="-322.83374" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="468907">
@@ -1053,7 +1053,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="398.8623" y="63.42163" z="0.0"></viz:position>
+        <viz:position x="252.86218" y="-282.02563" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="286963">
@@ -1062,7 +1062,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-32.269592" y="350.10394" z="0.0"></viz:position>
+        <viz:position x="-283.22876" y="350.21417" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="518495">
@@ -1071,7 +1071,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-52.791992" y="299.6349" z="0.0"></viz:position>
+        <viz:position x="-211.34662" y="372.69702" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1486542">
@@ -1080,7 +1080,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-367.2508" y="-301.58423" z="0.0"></viz:position>
+        <viz:position x="506.11877" y="342.91467" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="949880">
@@ -1089,7 +1089,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="325.9887" y="-452.21634" z="0.0"></viz:position>
+        <viz:position x="-187.69363" y="-414.7625" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1112850">
@@ -1098,7 +1098,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-359.84918" y="-468.28854" z="0.0"></viz:position>
+        <viz:position x="42.95404" y="294.0805" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1133718">
@@ -1107,7 +1107,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-41.81015" y="-142.78949" z="0.0"></viz:position>
+        <viz:position x="221.39923" y="239.44861" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1630596">
@@ -1116,7 +1116,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="80.0"></viz:size>
-        <viz:position x="237.1452" y="-398.79337" z="0.0"></viz:position>
+        <viz:position x="-87.53189" y="-120.25415" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630540">
@@ -1125,7 +1125,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="79.3421"></viz:size>
-        <viz:position x="156.36768" y="-182.58667" z="0.0"></viz:position>
+        <viz:position x="154.17548" y="309.22015" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630597">
@@ -1134,7 +1134,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="79.3421"></viz:size>
-        <viz:position x="-246.2085" y="129.08319" z="0.0"></viz:position>
+        <viz:position x="-88.3468" y="-88.01666" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630598">
@@ -1143,7 +1143,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="78.684204"></viz:size>
-        <viz:position x="-479.794" y="234.44836" z="0.0"></viz:position>
+        <viz:position x="273.13312" y="61.393127" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1630599">
@@ -1152,7 +1152,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="55.0"></viz:size>
-        <viz:position x="-95.9411" y="322.77167" z="0.0"></viz:position>
+        <viz:position x="-246.35573" y="-153.97269" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="578200">
@@ -1161,7 +1161,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="186.86493" y="497.44342" z="0.0"></viz:position>
+        <viz:position x="186.9704" y="-22.029541" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1352246">
@@ -1170,7 +1170,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="230.58777" y="-148.668" z="0.0"></viz:position>
+        <viz:position x="-302.88617" y="-444.76773" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1379">
@@ -1179,7 +1179,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="72.823425" y="277.09705" z="0.0"></viz:position>
+        <viz:position x="-348.09088" y="-279.46893" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1530233">
@@ -1188,7 +1188,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="293.27985" y="-374.48453" z="0.0"></viz:position>
+        <viz:position x="-353.47266" y="-50.786438" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="58753">
@@ -1197,7 +1197,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="426.58295" y="-332.23257" z="0.0"></viz:position>
+        <viz:position x="-145.44943" y="378.69818" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1107704">
@@ -1206,7 +1206,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="23.134277" y="-41.55713" z="0.0"></viz:position>
+        <viz:position x="258.32373" y="382.58936" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="498033">
@@ -1215,7 +1215,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-276.48816" y="135.72949" z="0.0"></viz:position>
+        <viz:position x="-354.19888" y="319.7099" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="40650">
@@ -1224,7 +1224,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-484.714" y="200.43524" z="0.0"></viz:position>
+        <viz:position x="-16.406158" y="-169.939" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="21448">
@@ -1233,7 +1233,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="177.27576" y="-331.5932" z="0.0"></viz:position>
+        <viz:position x="69.03815" y="187.5838" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="216228">
@@ -1242,7 +1242,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="418.99194" y="239.38507" z="0.0"></viz:position>
+        <viz:position x="-220.4136" y="488.14276" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="238128">
@@ -1251,7 +1251,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-83.28781" y="332.85986" z="0.0"></viz:position>
+        <viz:position x="-94.4314" y="-11.936218" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="145615">
@@ -1260,7 +1260,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-2.6509705" y="-162.84225" z="0.0"></viz:position>
+        <viz:position x="430.3808" y="-195.33246" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="521830">
@@ -1269,7 +1269,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="182.67242" y="46.541077" z="0.0"></viz:position>
+        <viz:position x="246.56653" y="-260.51794" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="521831">
@@ -1278,7 +1278,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-124.1821" y="-367.13638" z="0.0"></viz:position>
+        <viz:position x="31.321411" y="-65.72949" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="288140">
@@ -1287,7 +1287,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-263.73322" y="-260.69928" z="0.0"></viz:position>
+        <viz:position x="293.05792" y="-130.13571" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="521832">
@@ -1296,7 +1296,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="476.16498" y="-214.55582" z="0.0"></viz:position>
+        <viz:position x="212.31793" y="271.36835" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="521285">
@@ -1305,7 +1305,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="38.115356" y="242.85687" z="0.0"></viz:position>
+        <viz:position x="-315.84564" y="397.05237" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="365639">
@@ -1314,7 +1314,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="141.22394" y="-349.13403" z="0.0"></viz:position>
+        <viz:position x="101.87323" y="21.725708" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="521833">
@@ -1323,7 +1323,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-342.38257" y="182.41772" z="0.0"></viz:position>
+        <viz:position x="-341.3805" y="-58.687164" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1098735">
@@ -1332,7 +1332,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-4.0823364" y="-406.682" z="0.0"></viz:position>
+        <viz:position x="-133.29193" y="-260.48148" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1143196">
@@ -1341,7 +1341,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-198.07993" y="-135.12827" z="0.0"></viz:position>
+        <viz:position x="265.98602" y="-211.15369" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1447233">
@@ -1350,7 +1350,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-338.72937" y="15.160522" z="0.0"></viz:position>
+        <viz:position x="-98.890625" y="378.87482" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="557205">
@@ -1359,7 +1359,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-183.82199" y="-341.0628" z="0.0"></viz:position>
+        <viz:position x="-339.1778" y="-450.1936" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="38612">
@@ -1368,7 +1368,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="40.67987" y="-43.027008" z="0.0"></viz:position>
+        <viz:position x="385.6383" y="-312.80533" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="210136">
@@ -1377,7 +1377,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-0.13787842" y="-355.11023" z="0.0"></viz:position>
+        <viz:position x="237.38074" y="435.88416" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="196053">
@@ -1386,7 +1386,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-468.49704" y="166.90302" z="0.0"></viz:position>
+        <viz:position x="-13.410645" y="-297.88016" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1134668">
@@ -1395,7 +1395,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="108.28772" y="374.9632" z="0.0"></viz:position>
+        <viz:position x="-8.253357" y="-179.79254" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1550792">
@@ -1404,7 +1404,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="180.05963" y="367.617" z="0.0"></viz:position>
+        <viz:position x="-74.39758" y="-295.1544" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="917655">
@@ -1413,7 +1413,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="464.19775" y="430.24426" z="0.0"></viz:position>
+        <viz:position x="34.730164" y="-463.74872" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1352420">
@@ -1422,7 +1422,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="31.973684"></viz:size>
-        <viz:position x="494.43335" y="-440.49295" z="0.0"></viz:position>
+        <viz:position x="-486.91428" y="229.53589" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="472663">
@@ -1431,7 +1431,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-308.84937" y="85.86041" z="0.0"></viz:position>
+        <viz:position x="-378.8618" y="322.64972" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="473094">
@@ -1440,7 +1440,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-143.00284" y="-409.5916" z="0.0"></viz:position>
+        <viz:position x="509.61572" y="-368.07544" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="773530">
@@ -1449,7 +1449,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-301.3752" y="-196.51526" z="0.0"></viz:position>
+        <viz:position x="409.68677" y="-72.75415" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="937897">
@@ -1458,7 +1458,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-262.62094" y="-105.06506" z="0.0"></viz:position>
+        <viz:position x="356.23865" y="279.75543" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="944461">
@@ -1467,7 +1467,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-301.83087" y="458.65906" z="0.0"></viz:position>
+        <viz:position x="-77.29883" y="-353.5893" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1605014">
@@ -1476,7 +1476,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="196.61884" y="260.64044" z="0.0"></viz:position>
+        <viz:position x="397.60443" y="-356.46677" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1447164">
@@ -1485,7 +1485,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-289.41077" y="180.16376" z="0.0"></viz:position>
+        <viz:position x="335.8844" y="494.60895" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1212887">
@@ -1494,7 +1494,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="494.55963" y="-286.43466" z="0.0"></viz:position>
+        <viz:position x="-288.8755" y="438.13013" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="251399">
@@ -1503,7 +1503,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="236.07587" y="429.63776" z="0.0"></viz:position>
+        <viz:position x="-204.18488" y="-225.61768" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1112791">
@@ -1512,7 +1512,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-34.94513" y="132.33105" z="0.0"></viz:position>
+        <viz:position x="50.849243" y="494.10944" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="869253">
@@ -1521,7 +1521,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="502.3448" y="481.8802" z="0.0"></viz:position>
+        <viz:position x="436.471" y="-451.63107" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="895463">
@@ -1530,7 +1530,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-292.63895" y="-2.2062073" z="0.0"></viz:position>
+        <viz:position x="-283.479" y="222.20215" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="110172">
@@ -1539,7 +1539,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-19.72818" y="-220.25882" z="0.0"></viz:position>
+        <viz:position x="145.95514" y="402.67114" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1519663">
@@ -1548,7 +1548,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="57.12628" y="-235.62662" z="0.0"></viz:position>
+        <viz:position x="-133.73349" y="375.18933" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1362511">
@@ -1557,7 +1557,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-337.82922" y="-267.76483" z="0.0"></viz:position>
+        <viz:position x="-79.2637" y="-65.170044" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="484367">
@@ -1566,7 +1566,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="246.67224" y="-300.47763" z="0.0"></viz:position>
+        <viz:position x="-94.3515" y="308.51532" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="699754">
@@ -1575,7 +1575,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-65.22406" y="400.48828" z="0.0"></viz:position>
+        <viz:position x="337.0968" y="-400.14093" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1253787">
@@ -1584,7 +1584,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="141.80792" y="-320.5965" z="0.0"></viz:position>
+        <viz:position x="106.30615" y="94.27606" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1030787">
@@ -1593,7 +1593,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-252.84497" y="173.35645" z="0.0"></viz:position>
+        <viz:position x="268.11444" y="-95.7623" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1030786">
@@ -1602,7 +1602,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="451.2011" y="351.69464" z="0.0"></viz:position>
+        <viz:position x="-465.82956" y="-347.2016" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="376144">
@@ -1611,7 +1611,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="173.19269" y="-26.972473" z="0.0"></viz:position>
+        <viz:position x="479.3872" y="450.45593" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1030785">
@@ -1620,7 +1620,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="344.37372" y="280.54187" z="0.0"></viz:position>
+        <viz:position x="-299.751" y="-468.15512" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1592722">
@@ -1629,7 +1629,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="398.94806" y="-249.35133" z="0.0"></viz:position>
+        <viz:position x="147.84375" y="3.651947" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1498205">
@@ -1638,7 +1638,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-14.324554" y="174.03265" z="0.0"></viz:position>
+        <viz:position x="86.23273" y="85.5506" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1486596">
@@ -1647,7 +1647,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-372.89545" y="32.99518" z="0.0"></viz:position>
+        <viz:position x="-334.6366" y="-422.92453" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="463960">
@@ -1656,7 +1656,7 @@
           <attvalue for="HomophiliaValue" value="0"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="94.12988" y="61.164368" z="0.0"></viz:position>
+        <viz:position x="-157.31601" y="-416.48276" z="0.0"></viz:position>
         <viz:color r="163" g="204" b="163"></viz:color>
       </node>
       <node id="1486595">
@@ -1665,7 +1665,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="383.8946" y="63.424133" z="0.0"></viz:position>
+        <viz:position x="312.56433" y="-485.4418" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1628066">
@@ -1674,7 +1674,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="272.8354" y="333.1313" z="0.0"></viz:position>
+        <viz:position x="509.32434" y="215.06165" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1469747">
@@ -1683,7 +1683,7 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="238.29425" y="-356.16663" z="0.0"></viz:position>
+        <viz:position x="-482.00037" y="-314.13477" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
       </node>
       <node id="1112781">
@@ -1692,8 +1692,24 @@
           <attvalue for="HomophiliaValue" value="24"></attvalue>
         </attvalues>
         <viz:size value="30.0"></viz:size>
-        <viz:position x="-483.3567" y="-107.14032" z="0.0"></viz:position>
+        <viz:position x="-435.0528" y="44.43451" z="0.0"></viz:position>
         <viz:color r="0" g="153" b="51"></viz:color>
+      </node>
+      <node id="PUBLIC0" label="public0">
+        <attvalues>
+          <attvalue for="FocusClousure" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="30.0"></viz:size>
+        <viz:position x="454.135" y="204.74933" z="0.0"></viz:position>
+        <viz:color r="153" g="153" b="255"></viz:color>
+      </node>
+      <node id="PUBLIC1" label="public1">
+        <attvalues>
+          <attvalue for="FocusClousure" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="80.0"></viz:size>
+        <viz:position x="-21.260406" y="-280.1029" z="0.0"></viz:position>
+        <viz:color r="102" g="0" b="204"></viz:color>
       </node>
     </nodes>
     <edges>
@@ -1712,7 +1728,49 @@
       <edge source="855261" target="73887" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="855261" target="PUBLIC1" weight="60.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="97254" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="258225" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="489392" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="278393" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="73887" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1029526" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630557" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1552187" target="1035139" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1552187" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1035139" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="224956" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="37050" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630555" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1699" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="730904" target="69082" weight="24.0">
@@ -1746,6 +1804,60 @@
         <attvalues></attvalues>
       </edge>
       <edge source="730904" target="232108" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="730904" target="PUBLIC1" weight="45.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="69082" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="587321" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1127900" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1127899" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="67332" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1465518" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1466350" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="516970" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1004482" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="851255" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="232108" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="229697" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="520024" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="320874" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="937961" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1618281" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1608226" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630608" target="1630557" weight="24.0">
@@ -1805,6 +1917,9 @@
       <edge source="1630608" target="1630621" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630608" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630622" target="1630557" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -1821,6 +1936,9 @@
         <attvalues></attvalues>
       </edge>
       <edge source="1630622" target="1630623" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630622" target="PUBLIC1" weight="100.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630615" target="1630557" weight="24.0">
@@ -1856,6 +1974,9 @@
       <edge source="1630615" target="1630621" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630615" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630616" target="1630557" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -1889,6 +2010,9 @@
       <edge source="1630616" target="1630621" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630616" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630617" target="1630557" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -1914,6 +2038,9 @@
         <attvalues></attvalues>
       </edge>
       <edge source="1630617" target="1630621" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630617" target="PUBLIC1" weight="100.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630614" target="1630557" weight="24.0">
@@ -1953,6 +2080,9 @@
         <attvalues></attvalues>
       </edge>
       <edge source="1630614" target="1630621" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630614" target="PUBLIC1" weight="100.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630611" target="1630557" weight="24.0">
@@ -1995,6 +2125,9 @@
         <attvalues></attvalues>
       </edge>
       <edge source="1630611" target="1630621" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630611" target="PUBLIC1" weight="100.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630609" target="1630557" weight="24.0">
@@ -2051,6 +2184,9 @@
       <edge source="1630609" target="1630621" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630609" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630610" target="1630557" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -2099,7 +2235,13 @@
       <edge source="1630610" target="1630621" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630610" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1632429" target="1630611" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1632429" target="PUBLIC1" weight="100.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630618" target="1630557" weight="24.0">
@@ -2126,6 +2268,9 @@
       <edge source="1630618" target="1630621" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630618" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630619" target="1630557" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -2147,6 +2292,18 @@
       <edge source="1630619" target="1630623" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630619" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630574" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630483" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630623" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630620" target="1608226" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -2160,6 +2317,9 @@
         <attvalues></attvalues>
       </edge>
       <edge source="1630620" target="1630621" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630620" target="PUBLIC1" weight="100.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630621" target="1630557" weight="24.0">
@@ -2178,6 +2338,15 @@
         <attvalues></attvalues>
       </edge>
       <edge source="1630621" target="1630623" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630621" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1258097" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="208085" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630605" target="1630557" weight="24.0">
@@ -2240,7 +2409,19 @@
       <edge source="1630605" target="1630621" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630605" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1519763" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1112881" target="1264988" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1112881" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1264988" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630600" target="1630557" weight="24.0">
@@ -2318,6 +2499,9 @@
       <edge source="1630600" target="1632525" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630600" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630601" target="1630557" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -2390,6 +2574,9 @@
       <edge source="1630601" target="1632525" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630601" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630602" target="1630557" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -2459,6 +2646,9 @@
       <edge source="1630602" target="1632525" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630602" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630603" target="1630557" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -2525,16 +2715,85 @@
       <edge source="1630603" target="1632525" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630603" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1632525" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="224667" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="40337" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="986288" target="146919" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="986288" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="146919" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="26568" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="44416" target="PUBLIC0" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1574883" target="1463803" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1574883" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1463803" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="557249" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="564250" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1627555" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="497534" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1374533" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1112759" target="177168" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1112759" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="177168" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="215863" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1604923" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1112639" target="1187830" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1112639" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1187830" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1484541" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="519288" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1619787" target="1484541" weight="24.0">
@@ -2555,13 +2814,40 @@
       <edge source="1619787" target="708652" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1619787" target="PUBLIC1" weight="50.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1575045" target="1627555" weight="24.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1575045" target="1007114" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1575045" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1579613" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1137817" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1007114" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="708652" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1211915" target="289606" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1211915" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="289606" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1579722" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1628010" target="1628063" weight="24.0">
@@ -2570,16 +2856,55 @@
       <edge source="1628010" target="1610016" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1628010" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1628063" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1610016" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="786465" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1513879" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1153251" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1405254" target="564250" weight="24.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1405254" target="1604923" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1405254" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1534444" target="1534280" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1534444" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1534280" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="166757" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="229735" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1466564" target="1513879" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1466564" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="905122" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="321717" target="37050" weight="24.0">
@@ -2597,13 +2922,70 @@
       <edge source="321717" target="1235617" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="321717" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="20028" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="321762" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1235617" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="556776" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1534446" target="1534280" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1534446" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="376188" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="548763" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="606737" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="513607" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="890106" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="521829" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="468907" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="286963" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="518495" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1486542" target="949880" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1486542" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="949880" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1112850" target="1211915" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1112850" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1133718" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630596" target="1630557" weight="24.0">
@@ -2696,6 +3078,9 @@
       <edge source="1630596" target="1630599" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630596" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630540" target="1630557" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -2778,6 +3163,9 @@
         <attvalues></attvalues>
       </edge>
       <edge source="1630540" target="1630599" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1630540" target="PUBLIC1" weight="100.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1630597" target="1630557" weight="24.0">
@@ -2867,6 +3255,9 @@
       <edge source="1630597" target="1630599" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630597" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630598" target="1630557" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -2948,6 +3339,9 @@
       <edge source="1630598" target="1630599" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630598" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1630599" target="1608226" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -2996,10 +3390,34 @@
       <edge source="1630599" target="1632525" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1630599" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="578200" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1352246" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1379" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1530233" target="937961" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1530233" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="58753" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1107704" target="208085" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1107704" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="498033" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="40650" target="1699" weight="24.0">
@@ -3062,7 +3480,55 @@
       <edge source="40650" target="521833" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="40650" target="PUBLIC1" weight="45.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="21448" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="216228" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="238128" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="145615" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="521830" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="521831" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="288140" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="521832" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="521285" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="365639" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="521833" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1098735" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1143196" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1447233" target="26568" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1447233" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="557205" target="PUBLIC0" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="38612" target="229697" weight="24.0">
@@ -3089,6 +3555,15 @@
       <edge source="38612" target="196053" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="38612" target="PUBLIC1" weight="87.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="210136" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="196053" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1134668" target="224956" weight="24.0">
         <attvalues></attvalues>
       </edge>
@@ -3096,6 +3571,15 @@
         <attvalues></attvalues>
       </edge>
       <edge source="1134668" target="1550792" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1134668" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1550792" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="917655" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1352420" target="557249" weight="24.0">
@@ -3146,10 +3630,46 @@
       <edge source="1352420" target="1605014" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1352420" target="PUBLIC1" weight="93.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="472663" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="473094" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="773530" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="937897" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="944461" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1605014" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1447164" target="1212887" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1447164" target="PUBLIC1" weight="100.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1212887" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="251399" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1112791" target="1374533" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1112791" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="869253" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="895463" target="1519763" weight="24.0">
@@ -3161,7 +3681,16 @@
       <edge source="895463" target="1519663" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="895463" target="PUBLIC1" weight="66.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="110172" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1519663" target="1498205" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1519663" target="PUBLIC0" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1362511" target="320874" weight="24.0">
@@ -3180,6 +3709,21 @@
         <attvalues></attvalues>
       </edge>
       <edge source="1362511" target="1253787" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1362511" target="PUBLIC1" weight="83.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="484367" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="699754" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1253787" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1030787" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1030786" target="1029526" weight="24.0">
@@ -3215,16 +3759,43 @@
       <edge source="1030786" target="1030785" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1030786" target="PUBLIC1" weight="90.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="376144" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1030785" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1592722" target="1258097" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1592722" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1498205" target="PUBLIC1" weight="0.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1486596" target="463960" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1486596" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="463960" target="PUBLIC0" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1486595" target="1098735" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1486595" target="PUBLIC1" weight="0.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1628066" target="1579722" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1628066" target="PUBLIC1" weight="100.0">
         <attvalues></attvalues>
       </edge>
       <edge source="1469747" target="1618281" weight="24.0">
@@ -3233,7 +3804,13 @@
       <edge source="1469747" target="869253" weight="24.0">
         <attvalues></attvalues>
       </edge>
+      <edge source="1469747" target="PUBLIC1" weight="50.0">
+        <attvalues></attvalues>
+      </edge>
       <edge source="1112781" target="1153251" weight="24.0">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="1112781" target="PUBLIC0" weight="0.0">
         <attvalues></attvalues>
       </edge>
     </edges>
